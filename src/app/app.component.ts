@@ -83,7 +83,7 @@ export class AppComponent implements OnInit {
         nameShowed: true
       },
       {
-        icon: "../assets/img/icon/safari.png",
+        icon: "../assets/img/icon/podcasts.png",
         name: "Podcasts",
         nameShowed: true
       },

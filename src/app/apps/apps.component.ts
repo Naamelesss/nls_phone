@@ -8,4 +8,8 @@ import { AppsArray } from '../models/apps.model';
 })
 export class AppsComponent {
   @Input() apps!: AppsArray;
+
+  onClickApp() {
+    console.log(this.apps.name)
+  }
 }

@@ -15,7 +15,7 @@
         // background-color: red;
         position: absolute;
         left: 33px;
-        top: 100px;
+        top: 80px;
         width: 334px;
         height: 530px;
     }
@@ -79,7 +79,8 @@
         left: 10px;
 
         &:hover {
-            transform: translate(0, -2px);
+            // transform: translate(0, -2px);
+            // transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms;
             // border-style: ridge;
             // animation-name: hold_app;
             // animation-duration: 0.2s;
