@@ -1,0 +1,103 @@
+.phone {    
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 400px;
+    height: 810px;
+
+    // background-color: blue;
+    img {
+        position: absolute;
+        width: 400px;
+    }
+
+    .app {
+        // background-color: red;
+        position: absolute;
+        left: 33px;
+        top: 100px;
+        width: 334px;
+        height: 530px;
+    }
+
+    .blurappbar {
+        position: absolute;
+        width: 335px;
+        height: 100px;
+        top: 680px;
+        right: 32px;
+        border-radius: 38px;
+
+        // background-color: red;
+        // background: rgba(194, 194, 194, 0.5);
+
+        // filter: blur(5px);
+    }
+    .appbar {
+        position: relative;
+        width: 335px;
+        height: 100px;
+        top: 680px;
+        border-radius: 38px;
+        margin: auto;
+        // filter: blur(0px);
+
+        // background-color: lightgray;
+        background: rgba(194, 194, 194, 0.5);
+        // opacity: 0.4;
+        // border-style: dashed;
+    }
+}
+
+.hour {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    color: white;
+    text-align: center;
+    // background-color: red;
+    // text-align: center;
+    // font-size: 18px;
+    width: 80px;
+}
+
+// @keyframes hold_app {
+//     from {transform: translate(0, 0);}
+//     to {transform: translate(0, -2px);}
+//   }
+
+.bottom_app {
+    // display: flex;
+    // flex-wrap: wrap;
+
+    // padding: 5px;
+    // margin: 5px 5px;
+    img {
+        position: relative;
+        width: 64px;
+        margin: 19px 7px;
+        left: 10px;
+
+        &:hover {
+            transform: translate(0, -2px);
+            // border-style: ridge;
+            // animation-name: hold_app;
+            // animation-duration: 0.2s;
+        }
+    }
+}
+
+// .iphone {
+//     position: absolute;
+//     width: 50%;
+//     bottom: 50px;
+//     right: 50px;
+// }
+
+// .wallpaper{
+//     position: absolute;
+//     width: 50%;
+//     bottom: 50px;
+//     right: 50px;
+// }
+

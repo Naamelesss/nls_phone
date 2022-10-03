@@ -1,0 +1,19 @@
+.applist {
+    // background-color: blue;
+    display: inline-block;
+    width: 83.5px;
+    height: 110px;
+    img {
+        // position: relative;
+        width: 64px;
+        padding: 10px;
+    }
+    p {
+        text-align: center;
+        margin-top: -10px;
+        color: white;
+    }
+    &:hover {
+        transform: translate(0, -2px);
+    }
+}
