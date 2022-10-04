@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   title = 'nls_phone';
 
   time!: Date;
+  devMode!: boolean;
 
   appsArray!: AppsArray[]
   constructor(private appsArrayService: AppsService) {}
@@ -19,5 +20,7 @@ export class AppComponent implements OnInit {
     this.time = new Date();
 
     this.appsArray = this.appsArrayService.appsArray;
+
+    this.devMode = true;
   }
 }

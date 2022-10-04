@@ -1,0 +1,46 @@
+.fond {
+    position: absolute;
+
+    background-color: aqua;
+    height: 165px;
+    width: 100%;
+}
+
+.base {
+    // background-color: aqua;
+    margin: 12px auto;
+
+    input {
+        background-color: white;
+        box-sizing: border-box;
+        padding: 5px 10px;
+        border: none;
+        box-shadow: lightgray 3px 3px 7px;
+        margin-right: 20px;
+        margin-left: 5px;
+        outline: none;
+        font-size: 14px;
+        font-weight: 500;
+        &:active {
+            transform: translate(1px, 1px);
+            box-shadow: lightgray 0 0 5px;
+        }
+    }
+    .button {
+        background-color: white;
+        box-sizing: border-box;
+        padding: 5px 10px;
+        border: none;
+        box-shadow: lightgray 3px 3px 7px;
+        margin-right: 20px;
+        margin-left: 5px;
+        outline: none;
+        font-size: 14px;
+        font-weight: 500;
+        &:active {
+            transform: translate(1px, 1px);
+            box-shadow: lightgray 0 0 5px;
+        }
+    }
+}
+
