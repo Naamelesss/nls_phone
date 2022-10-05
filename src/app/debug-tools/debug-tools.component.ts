@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DynamicIslandComponent } from '../dynamic-island/dynamic-island.component';
 
 @Component({
   selector: 'app-debug-tools',
@@ -11,7 +12,7 @@ export class DebugToolsComponent implements OnInit {
   text!: string;
   imgUrl!: string;
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.number = "";
     this.text = "";
     this.imgUrl = "";
@@ -20,6 +21,7 @@ export class DebugToolsComponent implements OnInit {
   onCall() {
     this.number = (<HTMLInputElement>document.getElementById("number")).value;
     console.log('Call #', this.number);
+    new DynamicIslandComponent().dynamicNotif();
   }
 
   onMsg() {
