@@ -4,22 +4,22 @@
     display: inline-block;
     width: 83.5px;
     height: 90px;
-    img {
-        // position: relative;
-        width: 48px;
-        padding: 18px;
-    }
+    
     p {
         text-align: center;
         margin-top: -16px;
         color: white;
         font-size: 12px;
     }
+}
+
+.image {
+    // position: relative;
+    width: 48px;
+    padding: 18px;
+    
     transition: transform 150ms ease-in-out; //opacity 150ms linear 100ms
     &:hover {
-        // transform: translate(0, -2px);
-        transform: scale(1.05); 
-
-        transition-delay: 0ms, 0ms;
+        transform: scale(1.04);
     }
 }

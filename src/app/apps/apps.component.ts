@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { AppsArray } from '../models/apps.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-apps',
@@ -9,7 +10,9 @@ import { AppsArray } from '../models/apps.model';
 export class AppsComponent {
   @Input() apps!: AppsArray;
 
+  constructor(private router: Router) {}
+
   onClickApp() {
-    console.log(this.apps.name)
+    this.router.navigateByUrl(this.apps.route)
   }
 }
