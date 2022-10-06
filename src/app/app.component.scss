@@ -1,3 +1,11 @@
+// .router {
+//     position: absolute;
+//     bottom: 50px;
+//     right: 50px;
+//     width: 400px;
+//     height: 810px;
+// }
+
 .phone {    
     position: absolute;
     bottom: 50px;
@@ -5,48 +13,17 @@
     width: 400px;
     height: 810px;
 
-    // background-color: blue;
-    img {
-        position: absolute;
-        width: 400px;
-    }
+    // background-color: blue; 
+}
 
-    .app {
-        // background-color: red;
-        position: absolute;
-        left: 33px;
-        top: 80px;
-        width: 334px;
-        height: 530px;
-    }
+.iphone {
+    bottom: 0;
+    right: 0;
+}
 
-    .blurappbar {
-        position: absolute;
-        width: 335px;
-        height: 100px;
-        top: 680px;
-        right: 32px;
-        border-radius: 38px;
-
-        // background-color: red;
-        // background: rgba(194, 194, 194, 0.5);
-
-        // filter: blur(5px);
-    }
-    .appbar {
-        position: relative;
-        width: 335px;
-        height: 100px;
-        top: 680px;
-        border-radius: 38px;
-        margin: auto;
-        // filter: blur(0px);
-
-        // background-color: lightgray;
-        background: rgba(194, 194, 194, 0.5);
-        // opacity: 0.4;
-        // border-style: dashed;
-    }
+img {
+    position: absolute;
+    width: 400px;
 }
 
 .hour {
@@ -61,44 +38,4 @@
     width: 80px;
 }
 
-// @keyframes hold_app {
-//     from {transform: translate(0, 0);}
-//     to {transform: translate(0, -2px);}
-//   }
-
-.bottom_app {
-    // display: flex;
-    // flex-wrap: wrap;
-
-    // padding: 5px;
-    // margin: 5px 5px;
-    img {
-        position: relative;
-        width: 64px;
-        margin: 19px 7px;
-        left: 10px;
-
-        &:hover {
-            // transform: translate(0, -2px);
-            // transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms;
-            // border-style: ridge;
-            // animation-name: hold_app;
-            // animation-duration: 0.2s;
-        }
-    }
-}
-
-// .iphone {
-//     position: absolute;
-//     width: 50%;
-//     bottom: 50px;
-//     right: 50px;
-// }
-
-// .wallpaper{
-//     position: absolute;
-//     width: 50%;
-//     bottom: 50px;
-//     right: 50px;
-// }
 

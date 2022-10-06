@@ -1,26 +1,14 @@
 <app-debug-tools *ngIf="devMode"></app-debug-tools>
 
 <div class="phone">
-    <img class="wallpaper" src="../assets/img/wallpaper.png" alt="Wallpaper">
+    
+
     <img class="iphone" src="../assets/img/base.png" alt="iPhone 14">  
+    
+    <router-outlet></router-outlet>
+
     <p class="hour">{{time | date: 'HH:mm'}}</p> <!--- a syncr tt les min --->
 
-    <div class="app">
-        <app-apps *ngFor="let element of appsArray" [apps]="element"></app-apps>
-    </div>
-
-
-    <div class="blurappbar">
-        
-    </div>
-    <div class="appbar">
-        <div class="bottom_app">
-            <!-- <img src="../assets/img/icon/phone.png" alt="Icon">
-            <img src="../assets/img/icon/safari.png" alt="Icon">
-            <img src="../assets/img/icon/message.png" alt="Icon">
-            <img src="../assets/img/icon/music.png" alt="Icon"> -->
-        </div>
-    </div>
-
-    <app-dynamic-island></app-dynamic-island>
+    <!-- <app-home-screen></app-home-screen> -->
+    <!-- <app-dynamic-island></app-dynamic-island> -->
 </div>

@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AppsArray } from './models/apps.model';
-import { AppsService } from './services/apps.service';
 
 @Component({
   selector: 'app-root',
@@ -13,14 +11,8 @@ export class AppComponent implements OnInit {
   time!: Date;
   devMode!: boolean;
 
-  appsArray!: AppsArray[]
-  constructor(private appsArrayService: AppsService) {}
-
   ngOnInit() {
     this.time = new Date();
-
-    this.appsArray = this.appsArrayService.appsArray;
-
     this.devMode = true;
   }
 }
