@@ -5,7 +5,9 @@
 
     <img class="iphone" src="../assets/img/base.png" alt="iPhone 14">  
     
-    <router-outlet></router-outlet>
+    <div [@triggerName]="prepareRoute(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </div>
 
     <p class="hour">{{time | date: 'HH:mm'}}</p> <!--- a syncr tt les min --->
 
