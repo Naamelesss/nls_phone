@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { AppsComponent } from './apps/apps.component';
 import { DebugToolsComponent } from './debug-tools/debug-tools.component';
 import { DynamicIslandComponent } from './dynamic-island/dynamic-island.component';
+import { HomeScreenComponent } from './home-screen/home-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppsComponent,
     DebugToolsComponent,
-    DynamicIslandComponent
+    DynamicIslandComponent,
+    HomeScreenComponent
   ],
   imports: [
     BrowserModule
