@@ -1,0 +1,18 @@
+.bar {
+    position: absolute;
+    background-color: black;
+    height: 8px;
+    width: 140px;
+    border-radius: 6px;
+
+    top:774px;
+    left: 130px;
+
+    margin: auto;
+
+    transition: transform 300ms ease-in-out; //opacity 150ms linear 100ms
+    &:hover {
+        // transform: scale(1.04);
+        transform: translateY(-2px);
+    }
+}
