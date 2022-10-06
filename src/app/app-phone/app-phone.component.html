@@ -1,3 +1,49 @@
-<div class="background"></div>
+<div class="background">
+    <!-- <div class="navigation">
+        <nav>
+            <div>
+            <button>Favoris</button>
+            </div>
+            <button>Récents</button>
+            <button>Contacts</button>
+            <button>Clavier</button>
+            <button>Messagerie</button>
+        </nav>
+    </div> -->
+
+    <div class="clavier">
+        <p class="number" *ngIf="callNumber !== 4.2">{{callNumber}}</p>
+        <p class="addnumber">Ajouter ce numéro</p>
+
+        <div class="clavbutton">
+            <div class="centerbutton">
+                <button (click)="onClickNumber(1)">1</button>
+                <button (click)="onClickNumber(2)">2</button>
+                <button (click)="onClickNumber(3)">3</button>
+                <button (click)="onClickNumber(4)">4</button>
+                <button (click)="onClickNumber(5)">5</button>
+                <button (click)="onClickNumber(6)">6</button>
+                <button (click)="onClickNumber(7)">7</button>
+                <button (click)="onClickNumber(8)">8</button>
+                <button (click)="onClickNumber(9)">9</button>
+                <button>*</button>
+                <button (click)="onClickNumber(0)">0</button>
+                <button>#</button>
+                <button class="center_" (click)="onCall()">Call</button>
+                <button class="center_">Return</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <nav>
+            <a>Favoris</a>
+            <a>Récents</a>
+            <a>Contacts</a>
+            <a>Clavier</a>
+            <a>Messagerie</a>
+        </nav>
+    </div>
+</div>
 
 <app-home-bar></app-home-bar>

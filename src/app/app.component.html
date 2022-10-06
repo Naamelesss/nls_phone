@@ -1,8 +1,6 @@
 <app-debug-tools *ngIf="devMode"></app-debug-tools>
 
 <div class="phone">
-    
-
     <img class="iphone" src="../assets/img/base.png" alt="iPhone 14">  
     
     <div [@triggerName]="prepareRoute(outlet)">
@@ -11,6 +9,5 @@
 
     <p class="hour">{{time | date: 'HH:mm'}}</p> <!--- a syncr tt les min --->
 
-    <!-- <app-home-screen></app-home-screen> -->
     <!-- <app-dynamic-island></app-dynamic-island> -->
 </div>
