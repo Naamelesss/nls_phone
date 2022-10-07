@@ -10,6 +10,7 @@ import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { AppPhoneComponent } from './app-phone/app-phone.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeBarComponent } from './home-bar/home-bar.component';
+import { PhoneFormatPipe } from './phone-format.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomeBarComponent } from './home-bar/home-bar.component';
     DynamicIslandComponent,
     HomeScreenComponent,
     AppPhoneComponent,
-    HomeBarComponent
+    HomeBarComponent,
+    PhoneFormatPipe
   ],
   imports: [
     BrowserModule,
