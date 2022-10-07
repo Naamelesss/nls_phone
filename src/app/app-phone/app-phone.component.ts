@@ -9,17 +9,21 @@ export class AppPhoneComponent implements OnInit {
 
   constructor() { }
 
-  callNumber!: number;
+  callNumber!: string;
 
   ngOnInit(): void {
-    this.callNumber = 4.23;
+    this.callNumber = '06457845126';
   }
 
-  onClickNumber(number_: number) {
-    this.callNumber = number_;
+  onClickNumber(number_: string) {
+    this.callNumber = this.callNumber + number_;
   }
 
   onCall() {
     console.log('Call number #', this.callNumber)
+  }
+
+  onReturn() {
+    this.callNumber = this.callNumber.slice(0, -1);
   }
 }

@@ -11,7 +11,7 @@
 }
 
 .clavier {
-    background-color: yellow;
+    // background-color: yellow;
     height: 580px;
     width: 358px;
 
@@ -24,6 +24,9 @@
     text-align: center;
     font-size: 24px;
     font-weight: bold;
+
+    // background-color: aliceblue;
+    height: 30px;
 }
 
 .addnumber {
@@ -31,8 +34,18 @@
     text-align: center;
     font-size: 14px;
     // font-weight: bold;
-    color: rgb(44, 54, 197);
+    color: white;
     margin-top: -16px;
+
+    
+    transition: color 300ms ease-in-out;
+}
+.numberon {
+    color: rgb(44, 54, 197);
+
+    &:hover {
+        color: rgba(44, 54, 197, 0.6);
+    }
 }
 
 .clavbutton {
@@ -45,24 +58,56 @@
     top: 56px;
 
     .centerbutton {
-        // position: relative;
+        position: relative;
         margin: auto;
         background-color: aqua;
         width: 240px;
+        height: 400px;
+
+    //    span {
+    //     background-color: red;
+    //     position: relative;
+    //     // text-align: center;
+    //     font-size: 10px;
+    //    }
     }
 
     button {
+        vertical-align: middle;
         height: 60px;
         width: 60px;
         margin: 6px 10px;
 
         border-radius: 30px;
-
-        background-color: red;
+        font-size: 26px;
+        // background-color: red;
 
         &:hover {
             background-color: blue;
         }
+    }
+}
+
+.divbutton {
+    display: inline-block;
+    margin: 4px 8px;
+    vertical-align: middle;
+
+    height: 64px;
+    width: 64px;
+    background-color: red;
+}
+.txt {
+    position: relative;
+    height: 64px;
+    width: 64px;
+    background-color: lightcoral;
+    p {
+        position: relative;
+        top: 12px;
+        text-align: center;
+        margin: 0;
+        background-color: yellow;
     }
 }
 

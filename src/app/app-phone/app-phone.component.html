@@ -12,30 +12,75 @@
     </div> -->
 
     <div class="clavier">
-        <p class="number" *ngIf="callNumber !== 4.2">{{callNumber}}</p>
-        <p class="addnumber">Ajouter ce numéro</p>
+        <p class="number">{{callNumber | phoneFormat}}</p>
+        <p class="addnumber" [ngClass]="{numberon: callNumber !== ''}">Ajouter ce numéro</p>
 
         <div class="clavbutton">
             <div class="centerbutton">
-                <button (click)="onClickNumber(1)">1</button>
-                <button (click)="onClickNumber(2)">2</button>
-                <button (click)="onClickNumber(3)">3</button>
-                <button (click)="onClickNumber(4)">4</button>
-                <button (click)="onClickNumber(5)">5</button>
-                <button (click)="onClickNumber(6)">6</button>
-                <button (click)="onClickNumber(7)">7</button>
-                <button (click)="onClickNumber(8)">8</button>
-                <button (click)="onClickNumber(9)">9</button>
+                <!-- <div class="divbutton">
+                    <div class="txt"><p>1</p></div>
+                </div>
+                <div class="divbutton">
+                    <div class="txt">
+                        <p>2</p>
+                        <p>A B C</p>
+                    </div>
+                </div> -->
+                <!-- <div class="divbutton">
+                    <p>3</p>
+                    <p>D E F</p>
+                </div>
+                <div class="divbutton">
+                    <p>4</p>
+                    <p>G H I</p>
+                </div>
+                <div class="divbutton">
+                    <p>5</p>
+                    <p>J K L</p>
+                </div>
+                <div class="divbutton">
+                    <p>3</p>
+                    <p>M N O</p>
+                </div>
+                <div class="divbutton">
+
+                </div>
+                <div class="divbutton">
+
+                </div>
+                <div class="divbutton">
+
+                </div>
+                <div class="divbutton">
+
+                </div>
+                <div class="divbutton">
+
+                </div>
+                <div class="divbutton">
+
+                </div> -->
+
+
+                <button (click)="onClickNumber('1')"><span class="individual">1</span></button>
+                <button (click)="onClickNumber('2')">2<br><span>ABC</span></button>
+                <button (click)="onClickNumber('3')">3<br><span>DEF</span></button>
+                <button (click)="onClickNumber('4')">4<br><span>GHI</span></button>
+                <button (click)="onClickNumber('5')">5<br><span>JKL</span></button>
+                <button (click)="onClickNumber('6')">6<br><span>MNO</span></button>
+                <button (click)="onClickNumber('7')">7<br><span>PQRS</span></button>
+                <button (click)="onClickNumber('8')">8<br><span>TUV</span></button>
+                <button (click)="onClickNumber('9')">9<br><span>WXYZ</span></button>
                 <button>*</button>
-                <button (click)="onClickNumber(0)">0</button>
+                <button (click)="onClickNumber('0')">0<br><span>+</span></button>
                 <button>#</button>
                 <button class="center_" (click)="onCall()">Call</button>
-                <button class="center_">Return</button>
+                <button class="center_" (click)="onReturn()">Return</button>
             </div>
         </div>
     </div>
 
-    <div class="navbar">
+    <!-- <div class="navbar">
         <nav>
             <a>Favoris</a>
             <a>Récents</a>
@@ -43,7 +88,7 @@
             <a>Clavier</a>
             <a>Messagerie</a>
         </nav>
-    </div>
+    </div> -->
 </div>
 
 <app-home-bar></app-home-bar>
