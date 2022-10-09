@@ -6,6 +6,10 @@ export const routeTransitionAnimation = trigger('triggerName', [
     //     query(':enter', [style({ right: '-100%', opacity: 0 })]),
     //     query(':leave', animateChild()),
     // ])
+
+
+
+
     transition('home => app', [
 		style({ position: 'relative' }),
 		query(':enter, :leave', [
@@ -18,10 +22,31 @@ export const routeTransitionAnimation = trigger('triggerName', [
 		]),
 		query(':enter', [style({ transform: 'scale(0)'})]),
 		group([
-			query(':enter', [animate('0.2s ease-in-out', style({ transform: 'scale(1)'}))])
+			query(':enter', [animate('0.4s ease-in-out', style({ transform: 'scale(1)'}))])
 		]),
 		// query(':enter', animateChild())
 	]),
+
+
+	transition('app => home', [
+		style({ position: 'relative' }),
+		query(':leave', [
+			style({
+				position: 'absolute',
+				'z-index': 1,
+				top: 0,
+				right: 0,
+				width: '100%'
+			})
+		]),
+		query(':leave', [style({ top: '0' })]),
+		group([
+			query(':leave', [animate('0.8s ease-in-out', style({ top: '-800px' }))])
+		]),
+	]),
+
+
+
     // transition('app => home', [
 	// 	style({ position: 'relative' }),
 	// 	query(':enter, :leave', [
