@@ -4,3 +4,8 @@ export class AppsArray {
     route!: string;
     nameShowed!: boolean;
 }
+
+export class ContactsArray {
+    name!: string;
+    number!: string;
+}

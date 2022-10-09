@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { AppsArray } from "../models/apps.model";
+import { AppsArray, ContactsArray } from "../models/apps.model";
 
 @Injectable({
     providedIn: 'root'
@@ -10,7 +10,13 @@ export class AppsService {
       {
         icon: "../assets/img/icon/phone.png",
         name: "Téléphone",
-        route: "phone",
+        route: "phone/clavier",
+        nameShowed: true
+      },
+      {
+        icon: "../assets/img/icon/contacts.png",
+        name: "Contacts",
+        route: "contacts",
         nameShowed: true
       },
         // {
@@ -103,5 +109,28 @@ export class AppsService {
         //     name: "Cartes",
         //     nameShowed: true
         //   }
+    ];
+
+    contactsArray: ContactsArray[] = [
+      {
+        name: "Alex",
+        number: "0783526421"
+      },
+      {
+        name: "Alex 2",
+        number: "0783526422"
+      },
+      {
+        name: "Alex 3",
+        number: "0783526423"
+      },
+      {
+        name: "Alex 4",
+        number: "0783526424"
+      },
+      {
+        name: "Alex 5",
+        number: "0783526425"
+      }
     ]
 }
