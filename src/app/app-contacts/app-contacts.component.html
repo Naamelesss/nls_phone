@@ -1,0 +1,12 @@
+<div class="background">
+    <div class="header">
+        <p style="color: black; left: 156px; top: 30px; font-size: 24px;">Contacts</p>
+        <p>+</p>
+    </div>
+    <div class="list">
+        <app-app-contacts-list *ngFor="let element of contactsArray" [appContactList]="element"></app-app-contacts-list>
+        <p>{{contactsArray.length}} contacts</p>
+    </div>
+</div>
+
+<app-home-bar></app-home-bar>

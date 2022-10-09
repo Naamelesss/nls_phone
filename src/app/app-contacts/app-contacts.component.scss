@@ -1,0 +1,47 @@
+* {
+    transition: 300ms ease-in-out;
+}
+
+.background {
+    position: relative;
+    top: 18px;
+    margin: auto;
+    height: 774px;
+    // width: 358px;
+    border-radius: 50px;
+    background-color: white;
+
+    // z-index: -1;
+}
+
+.header {
+    // background-color: blue;
+    height: 100px;
+    // width: 774px;
+    // position: absolute;
+    border-bottom: 1px solid lightgray;
+    p {
+        position: absolute;
+        top: -6px;
+        right: 36px;
+        // position: relative;
+        color: rgb(44, 54, 197);
+        font-size: 46px;
+
+        &:hover {
+            color: rgba(44, 54, 197, 0.6);
+        }
+    }
+}
+
+.list {
+    // background-color: yellow;
+    max-height: 561px;
+    // width: 380px;
+    position: relative;
+    overflow: auto;
+    p {
+        text-align: center;
+    }
+}
+
