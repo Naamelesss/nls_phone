@@ -1,200 +1,33 @@
-* {
-    transition: 300ms ease-in-out;
-}
-
-.background {
-    position: relative;
-    top: 18px;
-    margin: auto;
-    height: 774px;
-    width: 358px;
-    border-radius: 50px;
-    background-color: white;
-
-    // z-index: -1;
-}
-
-.clavier {
-    // background-color: yellow;
-    height: 580px;
-    width: 358px;
-
-    position: absolute;
-    top: 50px;
-}
-
-.number {
-    margin-top: 50px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-
-    // background-color: aliceblue;
-    height: 30px;
-}
-
-.addnumber {
-    // margin: 50px;
-    text-align: center;
-    font-size: 14px;
-    // font-weight: bold;
-    color: white;
-    margin-top: -16px;
-
-    
-    // transition: color 300ms ease-in-out;
-}
-.numberon {
-    color: rgb(44, 54, 197);
-
-    &:hover {
-        color: rgba(44, 54, 197, 0.6);
-    }
-}
-
-.clavbutton {
-    // background-color: green;
-    height: 400px;
-    width: 270px;
-    // bottom: 0;
-    margin: auto;
-    position: relative;
-    top: 56px;
-
-    .centerbutton {
-        position: relative;
-        margin: auto;
-        // background-color: aqua;
-        width: 240px;
-        height: 400px;
-
-    //    span {
-    //     background-color: red;
-    //     position: relative;
-    //     // text-align: center;
-    //     font-size: 10px;
-    //    }
-    }
-
-    button {
-        vertical-align: middle;
-        height: 60px;
-        width: 60px;
-        margin: 6px 10px;
-
-        border-radius: 30px;
-        font-size: 26px;
-        // background-color: red;
-
-        &:hover {
-            // background-color: blue;
-        }
-    }
-}
-
-.divbutton {
-    display: inline-block;
-    margin: 4px 8px;
-    vertical-align: middle;
-
-    height: 64px;
-    width: 64px;
-    background-color: rgb(211, 211, 211);
-    border-radius: 32px;
-
-    &:hover {
-        background-color: rgb(185, 185, 185);
-    }
-
-    .imgbut {
-        position: relative;
-        top: -5px;
-        left: -5px;
-        width: 74px;
-    }
-    .imgbutbackspace {
-        position: relative;
-        top: 20px;
-        left: 20px;
-        width: 24px;
-
-        
-    }
-    .hiddenbackspace {
-        visibility: hidden;
-    }
-}
-.txt {
-    position: relative;
-    height: 64px;
-    width: 64px;
-    // background-color: lightcoral;
-    // font-weight: bold;
-    color: black;
-    p {
-        position: relative;
-        top: 8px;
-        text-align: center;
-        margin: 0;
-        // background-color: yellow;
-    }
-}
-
-.center_ {
-    position: relative;
-    left: 80px;
-}
-
-// .navigation {
-//     // z-index: 10;
-//     width: 358px;
-//     height: 50px;
-//     position: absolute;
-//     bottom: 44px;
-//     // left: 50px
-
-//     nav {
-//         margin: 0 auto;
-//     }
-
-//     // button {
-//     //     position: relative;
-//     //     height: 50px;
-//     //     width: 50px;
-//     // }
-
-//     background-color: red;
-// }
-
-.navbar {
-    position: relative;
-    top: 680px;
-    height: 50px;
-    
-    background-color: red;
-}
-
 nav {
     position: relative;
-    text-align: center;
-    // margin-bottom: 20px;
-    // padding: 10px;
-    top: 30px;
+    bottom: 64px;
+    // background-color: red;
+    width: 358px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+    div {
+        width: 64px;
+        height: 64px;
+        margin: auto;
+        // flex-grow: 1;
+        // background-color: purple;
+    }
+    img {
+        margin: 0 18px;
+        width: 26px;
+    }
+    p {
+        // position: relative;
+        // bottom: 6px;
+        margin: 0;
+        font-size: 12px;
+        text-align: center;
+        // background-color: blue;
+    }
 }
 
-a {
-    background-color: blue;
-    margin: 0 6px;
-    // margin: 0 10px;
-    // color: #333;
-    // text-decoration: none;
-    &:hover {
-    //   text-decoration: underline;
-    background-color: aqua;
-    }
-  }
-  
-//   .active {
-//     color: #666;
-//     text-decoration: underline;
-//   }
+.routerActive {
+    filter: brightness(0) saturate(100%) invert(15%) sepia(85%) saturate(2949%) hue-rotate(234deg) brightness(102%) contrast(102%);
+}
