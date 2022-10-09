@@ -1,24 +1,26 @@
 <app-debug-tools *ngIf="devMode"></app-debug-tools>
-
-<div class="phone">
     <img class="iphone" src="../assets/img/base.png" alt="iPhone 14">  
-    
-    <div [@triggerName]="prepareRoute(outlet)">
-        <router-outlet #outlet="outlet"></router-outlet>
+    <div class="overflow">
+        <div class="phone">
+            
+            <div [@triggerName]="prepareRoute(outlet)">
+                <router-outlet #outlet="outlet"></router-outlet>
+            </div>
+
+            <p class="hour">{{time | date: 'HH:mm'}}</p> <!--- a syncr tt les min --->
+
+            <div class="rightnotch">
+                <div class="icon">
+                    <img src="../assets/img/reseau.png">
+                </div>
+                <div class="icon">
+                    <p>4G</p></div>
+                <div class="icon">
+                    <img class="battery" src="../assets/img/battery.png">
+                </div>
+            </div>
+
+            <!-- <app-dynamic-island></app-dynamic-island> -->
     </div>
-
-    <p class="hour">{{time | date: 'HH:mm'}}</p> <!--- a syncr tt les min --->
-
-    <div class="rightnotch">
-        <div class="icon">
-            <img src="../assets/img/reseau.png">
-        </div>
-        <div class="icon">
-            <p>4G</p></div>
-        <div class="icon">
-            <img class="battery" src="../assets/img/battery.png">
-        </div>
-    </div>
-
-    <!-- <app-dynamic-island></app-dynamic-island> -->
+    <img class="notch" src="../assets/img/base_notch.png" alt="notch">
 </div>

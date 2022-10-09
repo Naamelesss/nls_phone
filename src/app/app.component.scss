@@ -8,17 +8,42 @@
 
 .phone {    
     position: absolute;
-    bottom: 50px;
-    right: 50px;
     width: 400px;
     height: 810px;
+    top: -18px;
+    right: -21px;
 
-    // background-color: blue; 
+    // background-color: blue;
+}
+
+.overflow {
+    // background-color: red;
+    
+    overflow: hidden;
+    position: absolute;
+    width: 358px;
+    height: 774px;
+    border-radius: 50px;
+    // margin: 19px 0;
+
+    
+    bottom: 50px;
+    right: 50px;
 }
 
 .iphone {
-    bottom: 0;
-    right: 0;
+    // background-color: yellow;
+    // position: relative;
+    bottom: 32px;
+    right: 29px;
+}
+
+.notch {
+    left: 128px;
+    top: 11px;
+    width: 102px;
+    // background-color: red;
+    z-index: 2;
 }
 
 img {
