@@ -1,0 +1,16 @@
+* {
+    transition: 300ms ease-in-out;
+}
+
+.contact {
+    border-bottom: 1px solid lightgray;
+    height: 50px;
+    p {
+        position: absolute;
+        left: 40px;
+    }
+
+    &:hover {
+        background-color: rgb(185, 185, 185);
+    }
+}
