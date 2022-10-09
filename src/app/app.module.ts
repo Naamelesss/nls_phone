@@ -11,6 +11,11 @@ import { AppPhoneComponent } from './app-phone/app-phone.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeBarComponent } from './home-bar/home-bar.component';
 import { PhoneFormatPipe } from './phone-format.pipe';
+import { AppPhoneClavierComponent } from './app-phone-clavier/app-phone-clavier.component';
+import { AppContactsComponent } from './app-contacts/app-contacts.component';
+import { PhoneContactsComponent } from './phone-contacts/phone-contacts.component';
+import { AppPhoneContactsComponent } from './app-phone-contacts/app-phone-contacts.component';
+import { AppContactsListComponent } from './app-contacts-list/app-contacts-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { PhoneFormatPipe } from './phone-format.pipe';
     HomeScreenComponent,
     AppPhoneComponent,
     HomeBarComponent,
-    PhoneFormatPipe
+    PhoneFormatPipe,
+    AppPhoneClavierComponent,
+    AppContactsComponent,
+    PhoneContactsComponent,
+    AppPhoneContactsComponent,
+    AppContactsListComponent
   ],
   imports: [
     BrowserModule,
