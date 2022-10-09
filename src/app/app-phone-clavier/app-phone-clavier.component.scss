@@ -1,0 +1,210 @@
+* {
+    transition: 300ms ease-in-out;
+}
+
+.background {
+    position: relative;
+    top: 18px;
+    margin: auto;
+    height: 774px;
+    width: 358px;
+    border-radius: 50px;
+    background-color: white;
+
+    // z-index: -1;
+}
+
+.clavier {
+    // background-color: yellow;
+    height: 580px;
+    width: 358px;
+
+    position: absolute;
+    top: 70px;
+}
+
+.number {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+
+    // background-color: aliceblue;
+    height: 30px;
+}
+
+.addnumber {
+    // margin: 50px;
+    text-align: center;
+    font-size: 14px;
+    // font-weight: bold;
+    color: white;
+    margin-top: -16px;
+
+    
+    // transition: color 300ms ease-in-out;
+}
+.numberon {
+    color: rgb(44, 54, 197);
+
+    &:hover {
+        color: rgba(44, 54, 197, 0.6);
+    }
+}
+
+.clavbutton {
+    // background-color: green;
+    height: 400px;
+    width: 300px;
+    // bottom: 0;
+    margin: auto;
+    position: relative;
+    top: 70px;
+
+    .centerbutton {
+        position: relative;
+        margin: auto;
+        // background-color: aqua;
+        width: 280px;
+        height: 400px;
+
+    //    span {
+    //     background-color: red;
+    //     position: relative;
+    //     // text-align: center;
+    //     font-size: 10px;
+    //    }
+    }
+
+    button {
+        vertical-align: middle;
+        height: 60px;
+        width: 60px;
+        margin: 6px 10px;
+
+        border-radius: 30px;
+        font-size: 26px;
+        // background-color: red;
+
+        // &:hover {
+        //     // background-color: blue;
+        // }
+    }
+}
+
+.divbutton {
+    display: inline-block;
+    margin: 8px 14px;
+    vertical-align: middle;
+
+    height: 64px;
+    width: 64px;
+    background-color: rgb(211, 211, 211);
+    border-radius: 32px;
+
+    &:hover {
+        background-color: rgb(185, 185, 185);
+    }
+
+    .imgbut {
+        position: relative;
+        top: -5px;
+        left: -5px;
+        width: 74px;
+
+        &:hover {
+            // filter: grayscale(50%);
+            // opacity: 0.7;
+            filter: contrast(0.75);
+        }
+    }
+    .imgbutbackspace {
+        position: relative;
+        top: 20px;
+        left: 20px;
+        width: 24px;
+
+        &:hover {
+            // filter: grayscale(100%);
+            // opacity: 0.7;
+            filter: contrast(0.75);
+        }
+    }
+    .hiddenbackspace {
+        opacity: 0;
+    }
+}
+.txt {
+    position: relative;
+    height: 64px;
+    width: 64px;
+    // background-color: lightcoral;
+    // font-weight: bold;
+    color: black;
+    p {
+        position: relative;
+        top: 8px;
+        text-align: center;
+        margin: 0;
+        // background-color: yellow;
+    }
+}
+
+.center_ {
+    position: relative;
+    left: 80px;
+}
+
+// .navigation {
+//     // z-index: 10;
+//     width: 358px;
+//     height: 50px;
+//     position: absolute;
+//     bottom: 44px;
+//     // left: 50px
+
+//     nav {
+//         margin: 0 auto;
+//     }
+
+//     // button {
+//     //     position: relative;
+//     //     height: 50px;
+//     //     width: 50px;
+//     // }
+
+//     background-color: red;
+// }
+
+.navbar {
+    position: relative;
+    top: 680px;
+    height: 50px;
+    
+    background-color: red;
+}
+
+nav {
+    position: relative;
+    text-align: center;
+    // margin-bottom: 20px;
+    // padding: 10px;
+    top: 30px;
+}
+
+// a {
+//     background-color: blue;
+//     margin: 0 6px;
+//     // margin: 0 10px;
+//     // color: #333;
+//     // text-decoration: none;
+//     &:hover {
+//     //   text-decoration: underline;
+//     background-color: aqua;
+//     }
+//   }
+  
+//   .active {
+//     color: #666;
+//     text-decoration: underline;
+//   }
