@@ -16,6 +16,7 @@ import { AppContactsComponent } from './app-contacts/app-contacts.component';
 import { PhoneContactsComponent } from './phone-contacts/phone-contacts.component';
 import { AppPhoneContactsComponent } from './app-phone-contacts/app-phone-contacts.component';
 import { AppContactsListComponent } from './app-contacts-list/app-contacts-list.component';
+import { AppContactsAddComponent } from './app-contacts-add/app-contacts-add.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AppContactsListComponent } from './app-contacts-list/app-contacts-list.
     AppContactsComponent,
     PhoneContactsComponent,
     AppPhoneContactsComponent,
-    AppContactsListComponent
+    AppContactsListComponent,
+    AppContactsAddComponent
   ],
   imports: [
     BrowserModule,
