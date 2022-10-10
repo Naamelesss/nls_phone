@@ -1,0 +1,24 @@
+<div class="background">
+    <div class="header">
+        <p routerLink="/contacts">Annuler</p>
+        <p style="color: black; left: 116px; top: 30px; font-size: 24px;">Nouveau contact</p>
+        <p style="left: 340px;">OK</p>
+    </div>
+    <div class="list">
+        <div class="imgcontact">
+            <div class="text" [ngClass]="{ doubleName: firstLetterName !== '' && secLetterName !== '' }">
+                <div *ngIf="firstLetterName !== ''">{{firstLetterName | uppercase}}</div>
+                <div *ngIf="secLetterName !== ''">{{secLetterName | uppercase}}</div>
+            </div>
+
+            <img *ngIf="firstLetterName === '' &&  secLetterName === ''" src="../assets/img/phone/user.png" alt="contact name">
+        </div>
+        <input style="border-top: 1px solid lightgray;" placeholder="Prénom" maxlength="26" value="" #name (input)="onChangeName(name.value, 'main')">
+        <input placeholder="Nom" maxlength="26" value="" #subname (input)="onChangeName(subname.value, 'sub')">
+        <input placeholder="Numéro" type="number">
+        <!-- maxlength="3" max="000" min="999" -->
+        <textarea placeholder="Notes" cols="54" rows="6" maxlength="250"></textarea>
+    </div>
+</div>
+
+<app-home-bar></app-home-bar>
