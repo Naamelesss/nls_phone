@@ -112,25 +112,38 @@ export class AppsService {
     ];
 
     contactsArray: ContactsArray[] = [
-      {
-        name: "Alex",
-        number: "0783526421"
-      },
-      {
-        name: "Alex 2",
-        number: "0783526422"
-      },
-      {
-        name: "Alex 3",
-        number: "0783526423"
-      },
-      {
-        name: "Alex 4",
-        number: "0783526424"
-      },
-      {
-        name: "Alex 5",
-        number: "0783526425"
-      }
+      // {
+      //   name: "Alex",
+      //   number: "0783526421"
+      // },
+      // {
+      //   name: "Alex 2",
+      //   number: "0783526422"
+      // },
+      // {
+      //   name: "Alex 3",
+      //   number: "0783526423"
+      // },
+      // {
+      //   name: "Alex 4",
+      //   number: "0783526424"
+      // },
+      // {
+      //   name: "Alex 5",
+      //   number: "0783526425"
+      // }
     ]
+
+    // a faire pour apps
+    getAllContacts(): ContactsArray[] {
+      return this.contactsArray;
+    }
+    addNewContact(firstName: string, lastName: string, number: string, note: string): void {
+      // alert("Name : "+ firstName + " | LastName : " + lastName + " | Number : " + number + " | Note : " + note);
+      const newRow = {
+        name: firstName,
+        number: number
+      };
+      this.contactsArray.push(newRow);
+    }
 }
