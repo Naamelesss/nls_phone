@@ -1,8 +1,8 @@
 <div class="background">
     <div class="header">
-        <p routerLink="/contacts">Annuler</p>
-        <p style="color: black; left: 116px; top: 30px; font-size: 24px;">Nouveau contact</p>
-        <p style="left: 340px;">OK</p>
+        <p class="textAO" routerLink="/contacts">Annuler</p>
+        <p class="textAO" style="color: black; left: 116px; top: 30px; font-size: 24px;">Nouveau contact</p>
+        <p class="textAO textOGrey" [ngClass]="{ blueOK: (firstName !== '' || lastName !== '') && number !== ''}" style="left: 340px;" (click)="onValidateNewContact()">OK</p>
     </div>
     <div class="list">
         <div class="imgcontact">
@@ -13,11 +13,11 @@
 
             <img *ngIf="firstLetterName === '' &&  secLetterName === ''" src="../assets/img/phone/user.png" alt="contact name">
         </div>
-        <input style="border-top: 1px solid lightgray;" placeholder="Prénom" maxlength="26" value="" #name (input)="onChangeName(name.value, 'main')">
-        <input placeholder="Nom" maxlength="26" value="" #subname (input)="onChangeName(subname.value, 'sub')">
-        <input placeholder="Numéro" type="number">
+        <input style="border-top: 1px solid lightgray;" placeholder="Prénom" aria-autocomplete="list" maxlength="26" value="" #name (input)="onChangeName(name.value, 'main')">
+        <input placeholder="Nom" aria-autocomplete="list" maxlength="26" value="" #subname (input)="onChangeName(subname.value, 'sub')">
+        <input placeholder="Numéro" aria-autocomplete="list" type="number" value="" #number_ (input)="onChangeNumber(number_.value)">
         <!-- maxlength="3" max="000" min="999" -->
-        <textarea placeholder="Notes" cols="54" rows="6" maxlength="250"></textarea>
+        <textarea placeholder="Notes" aria-autocomplete="list" cols="54" rows="6" maxlength="250" #textnote (input)="onChangeNote(textnote.value)"></textarea>
     </div>
 </div>
 
