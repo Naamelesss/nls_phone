@@ -112,26 +112,24 @@ export class AppsService {
     ];
 
     contactsArray: ContactsArray[] = [
-      // {
-      //   name: "Alex",
-      //   number: "0783526421"
-      // },
-      // {
-      //   name: "Alex 2",
-      //   number: "0783526422"
-      // },
-      // {
-      //   name: "Alex 3",
-      //   number: "0783526423"
-      // },
-      // {
-      //   name: "Alex 4",
-      //   number: "0783526424"
-      // },
-      // {
-      //   name: "Alex 5",
-      //   number: "0783526425"
-      // }
+      {
+        firstName: "Alex",
+        lastName: "Deckel",
+        number: "0645784512",
+        note: "Notyyyy"
+      },
+      {
+        firstName: "Larry",
+        lastName: "",
+        number: "0645784513",
+        note: "Larry's"
+      },
+      {
+        firstName: "Flavien",
+        lastName: "",
+        number: "03",
+        note: "Flavinouminou"
+      }
     ]
 
     // a faire pour apps
@@ -141,9 +139,20 @@ export class AppsService {
     addNewContact(firstName: string, lastName: string, number: string, note: string): void {
       // alert("Name : "+ firstName + " | LastName : " + lastName + " | Number : " + number + " | Note : " + note);
       const newRow = {
-        name: firstName,
-        number: number
+        firstName: firstName,
+        lastName: lastName,
+        number: number,
+        note: note
       };
       this.contactsArray.push(newRow);
+    }
+    searchContactByNumber(number: string): any {
+      const search = this.contactsArray.find(search => search.number === number);
+      if (!search) {
+        // throw new Error('Number not found!');
+        return false;
+      } else {
+        return search;
+      }
     }
 }
