@@ -5,6 +5,9 @@
         <p class="textAO textOGrey" [ngClass]="{ blueOK: (firstName !== '' || lastName !== '') && number !== ''}" style="left: 340px;" (click)="onValidateNewContact()">OK</p>
     </div>
     <div class="list">
+        <div class="contactAlreadyExist" *ngIf="contactExist">
+            <p>Un contact avec ce numéro existe déjà</p>
+        </div>
         <div class="imgcontact">
             <div class="text" [ngClass]="{ doubleName: firstLetterName !== '' && secLetterName !== '' }">
                 <div *ngIf="firstLetterName !== ''">{{firstLetterName | uppercase}}</div>

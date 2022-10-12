@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppsService } from '../services/apps.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { AppsService } from '../services/apps.service';
 })
 export class AppContactsAddComponent implements OnInit {
 
-  constructor(private appService: AppsService) { }
+  constructor(private appService: AppsService, private router: Router) { }
 
   firstName!: string;
   lastName!: string;
@@ -18,14 +19,18 @@ export class AppContactsAddComponent implements OnInit {
   firstLetterName!: string;
   secLetterName!: string;
 
+  contactExist!: boolean;
+
   ngOnInit(): void {
-    this.firstName = 'a';
-    this.lastName = 'b';
-    this.number = '5';
-    this.note = 'c';
+    this.firstName = '';
+    this.lastName = '';
+    this.number = '';
+    this.note = '';
 
     this.firstLetterName = "";
     this.secLetterName = "";
+
+    this.contactExist = false;
   }
 
   onChangeName(name: string, type: string): void {
@@ -39,12 +44,21 @@ export class AppContactsAddComponent implements OnInit {
   }
   onChangeNumber(number: string):void {
     this.number = number;
+    // this.contactExist = false;
   }
   onChangeNote(text: string):void {
     this.note = text;
   }
   onValidateNewContact():void {
     // alert("Name : "+ this.firstName + " | LastName : " + this.lastName + " | Number : " + this.number + " | Note : " + this.note)
-    this.appService.addNewContact(this.firstName, this.lastName, this.number, this.note);
+    if ((this.firstName !== '' || this.lastName !== '') && this.number !== '') {
+      const search = this.appService.searchContactByNumber(this.number)
+      if (!search) {
+        this.appService.addNewContact(this.firstName, this.lastName, this.number, this.note);
+        this.router.navigateByUrl('contacts')
+      } else {
+        this.contactExist = true;
+      }
+    }
   }
 }

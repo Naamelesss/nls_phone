@@ -45,7 +45,30 @@
     }
 }
 
+@keyframes startError {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 26px;
+    }
+}
+
 .list {
+    .contactAlreadyExist {
+        position: relative;
+        margin-top: -16px;
+        width: 360px;
+        // height: 26px;
+        background-color: lightcoral;
+        p {
+            text-align: center;
+            position: relative;
+            top: 3px;
+            color: white;
+        }
+        animation: startError 0.4s ease-in-out forwards;
+    }
     .imgcontact {
         background-color: gray;
         height: 128px;
@@ -109,6 +132,7 @@
     //     text-align: center;
     // }
 }
+
 textarea::placeholder {
     padding-top: 10px;
 }
