@@ -33,23 +33,36 @@
     height: 30px;
 }
 
+.numberbox {
+    position: absolute;
+    // background-color: red;
+    height: 14px;
+    width: 100%;
+    margin-top: -12px;
+}
 .addnumber {
     // margin: 50px;
     text-align: center;
     font-size: 14px;
     // font-weight: bold;
-    color: white;
-    margin-top: -16px;
-
-    
-    // transition: color 300ms ease-in-out;
+    // color: white;
+    opacity: 0;
+    margin-top: -2px;
 }
+
 .numberon {
     color: rgb(44, 54, 197);
+    opacity: 1;
 
     &:hover {
         color: rgba(44, 54, 197, 0.6);
     }
+}
+.contactname {
+    position: relative;
+    top: -28px;
+    color: black;
+    opacity: 1;
 }
 
 .clavbutton {

@@ -13,7 +13,10 @@
 
     <div class="clavier">
         <p class="number">{{callNumber | phoneFormat}}</p>
-        <p class="addnumber" [ngClass]="{numberon: callNumber !== ''}">Ajouter ce numéro</p>
+        <div class="numberbox">
+            <p class="addnumber" [ngClass]="{numberon: callNumber !== '' && contactName === ''}">Ajouter ce numéro</p>
+            <p class="addnumber" [ngClass]="{contactname: callNumber !== '' && contactName !== ''}">{{ contactName }}</p>
+        </div>
 
         <div class="clavbutton">
             <div class="centerbutton">
