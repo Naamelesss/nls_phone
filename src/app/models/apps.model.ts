@@ -6,6 +6,8 @@ export class AppsArray {
 }
 
 export class ContactsArray {
-    name!: string;
+    firstName!: string;
+    lastName!: string;
     number!: string;
+    note!: string;
 }
