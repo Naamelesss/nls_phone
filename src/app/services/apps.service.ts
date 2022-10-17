@@ -19,6 +19,12 @@ export class AppsService {
         route: "contacts",
         nameShowed: true
       },
+      {
+        icon: "../assets/img/icon/photos.png",
+        name: "Photos",
+        route: "gallery",
+        nameShowed: true
+      },
         // {
         //     icon: "../assets/img/icon/facetime.png",
         //     name: "FaceTime",
@@ -29,11 +35,7 @@ export class AppsService {
         //     name: "Calendrier",
         //     nameShowed: true
         //   },
-        //   {
-        //     icon: "../assets/img/icon/photos.png",
-        //     name: "Photos",
-        //     nameShowed: true
-        //   },
+        //   
         //   {
         //     icon: "../assets/img/icon/camera.png",
         //     name: "Caméra",
