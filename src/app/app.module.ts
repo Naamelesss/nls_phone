@@ -17,6 +17,8 @@ import { PhoneContactsComponent } from './phone-contacts/phone-contacts.componen
 import { AppPhoneContactsComponent } from './app-phone-contacts/app-phone-contacts.component';
 import { AppContactsListComponent } from './app-contacts-list/app-contacts-list.component';
 import { AppContactsAddComponent } from './app-contacts-add/app-contacts-add.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { AppContactEditComponent } from './app-contact-edit/app-contact-edit.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { AppContactsAddComponent } from './app-contacts-add/app-contacts-add.com
     PhoneContactsComponent,
     AppPhoneContactsComponent,
     AppContactsListComponent,
-    AppContactsAddComponent
+    AppContactsAddComponent,
+    GalleryComponent,
+    AppContactEditComponent
   ],
   imports: [
     BrowserModule,
