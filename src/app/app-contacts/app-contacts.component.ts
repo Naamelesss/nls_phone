@@ -15,5 +15,4 @@ export class AppContactsComponent implements OnInit {
   ngOnInit(): void {
     this.contactsArray = this.contactsArrayService.contactsArray;
   }
-
 }
