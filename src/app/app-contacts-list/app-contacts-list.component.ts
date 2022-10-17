@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { ContactsArray } from '../models/apps.model';
 
 @Component({
@@ -8,4 +9,9 @@ import { ContactsArray } from '../models/apps.model';
 })
 export class AppContactsListComponent {
   @Input() appContactList!: ContactsArray;
+  constructor(private router: Router) {};
+  
+  onEditContact() {
+    this.router.navigateByUrl(`/contacts/edit/${this.appContactList.number}`)
+  }
 }
