@@ -12,6 +12,7 @@ const routes: Routes = [
     {path: '', component: HomeScreenComponent, data: { animationState: 'home' }},
     {path: 'phone/clavier', component: AppPhoneClavierComponent, data: { animationState: 'app' }},
     {path: 'phone/contacts', component: AppPhoneContactsComponent, data: { animationState: 'app' }},
+    {path: 'phone/contacts/add', component: AppContactsAddComponent, data: { animationState: 'app' }},
     {path: 'contacts', component: AppContactsComponent, data: { animationState: 'app' }},
     {path: 'contacts/add', component: AppContactsAddComponent, data: { animationState: 'app' }},
     {path: 'contacts/edit/:number', component: AppContactEditComponent},
