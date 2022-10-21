@@ -118,7 +118,7 @@ export class AppsService {
         firstName: "Alex",
         lastName: "Deckel",
         number: "0645784512",
-        note: "Notyyyy"
+        note: "Les notes sont désormais fonctionel ! Mêmes les notes trèèèèèèèèèèèèèèèèèèèèsssss longues sont pris en charge."
       },
       {
         firstName: "Larry",
@@ -138,6 +138,11 @@ export class AppsService {
     getAllContacts(): ContactsArray[] {
       return this.contactsArray;
     }
+
+    getApps(): AppsArray[] {
+      return this.appsArray;
+    }
+
     addNewContact(firstName: string, lastName: string, number: string, note: string): void {
       // alert("Name : "+ firstName + " | LastName : " + lastName + " | Number : " + number + " | Note : " + note);
       const newRow = {
