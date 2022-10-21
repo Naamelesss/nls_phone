@@ -7,16 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DynamicIslandComponent implements OnInit {
 
-  number!: number;
-  text1!: string;
-  text2!: string;
+  notifcall!: boolean;
 
-  constructor() { }
+  // number!: number;
+  // text1!: string;
+  // text2!: string;
+
+  // constructor() { }
 
   ngOnInit(): void {
+    this.notifcall = false;
+
+    // setTimeout(() => this.notifcall = true, 2000);
   }
 
-  dynamicNotif() {
-    
+  dynamicNotif(notifType: 'call' | 'message' | 'notif', number: string): void {
+    this.notifcall = !this.notifcall;
+
+    // if (notifType === 'call') {
+      
+    // }
   }
 }

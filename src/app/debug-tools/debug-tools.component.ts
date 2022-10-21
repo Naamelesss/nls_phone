@@ -8,6 +8,10 @@ import { DynamicIslandComponent } from '../dynamic-island/dynamic-island.compone
 })
 export class DebugToolsComponent implements OnInit {
 
+  // constructor(
+  //   private dynamicIsland : DynamicIslandComponent
+  //   ) {}
+
   number!: string;
   text!: string;
   imgUrl!: string;
@@ -21,7 +25,7 @@ export class DebugToolsComponent implements OnInit {
   onCall() {
     this.number = (<HTMLInputElement>document.getElementById("number")).value;
     console.log('Call #', this.number);
-    new DynamicIslandComponent().dynamicNotif();
+    // new DynamicIslandComponent().dynamicNotif('call', this.number);
   }
 
   onMsg() {
