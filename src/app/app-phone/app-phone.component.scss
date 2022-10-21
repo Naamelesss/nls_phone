@@ -1,3 +1,18 @@
+.filter_div {
+    width: 64px;
+    height: 64px;
+    margin: auto;
+    // flex-grow: 1;
+    // background-color: purple;
+    // filter: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(36%) hue-rotate(135deg) brightness(93%) contrast(87%);
+    filter: brightness(0) saturate(100%) invert(25%) sepia(0%) saturate(23%) hue-rotate(239deg) brightness(103%) contrast(95%);
+}
+
+.routerActive {
+    // filter: brightness(0) saturate(100%) invert(15%) sepia(85%) saturate(2949%) hue-rotate(234deg) brightness(102%) contrast(102%);
+    filter: brightness(0) saturate(100%) invert(20%) sepia(56%) saturate(3667%) hue-rotate(232deg) brightness(90%) contrast(106%);
+}
+
 nav {
     position: relative;
     bottom: 64px;
@@ -7,13 +22,6 @@ nav {
     display: flex;
     justify-content: center;
 
-    div {
-        width: 64px;
-        height: 64px;
-        margin: auto;
-        // flex-grow: 1;
-        // background-color: purple;
-    }
     img {
         margin: 0 18px;
         width: 26px;
@@ -26,8 +34,4 @@ nav {
         text-align: center;
         // background-color: blue;
     }
-}
-
-.routerActive {
-    filter: brightness(0) saturate(100%) invert(15%) sepia(85%) saturate(2949%) hue-rotate(234deg) brightness(102%) contrast(102%);
 }
