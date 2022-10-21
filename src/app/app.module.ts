@@ -19,6 +19,7 @@ import { AppContactsListComponent } from './app-contacts-list/app-contacts-list.
 import { AppContactsAddComponent } from './app-contacts-add/app-contacts-add.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { AppContactEditComponent } from './app-contact-edit/app-contact-edit.component';
+import { DynamicIslandCallComponent } from './dynamic-island-call/dynamic-island-call.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { AppContactEditComponent } from './app-contact-edit/app-contact-edit.com
     AppContactsListComponent,
     AppContactsAddComponent,
     GalleryComponent,
-    AppContactEditComponent
+    AppContactEditComponent,
+    DynamicIslandCallComponent
   ],
   imports: [
     BrowserModule,
