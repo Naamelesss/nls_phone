@@ -1,1 +1,41 @@
-<p>app-contact-edit works!</p>
+<div class="background">
+    <div class="header">
+        <p class="return" routerLink="../../">< Retour</p>
+        <div class="contact_img">
+            <div class="contact_letter">
+                <p>{{contactInitial | uppercase}}</p>
+            </div>
+        </div>
+        <p>{{contact.firstName}} {{contact.lastName}}</p>
+    </div>
+    <div class="content">
+        <div class="box">
+            <div class="single_box">
+                <img src="../assets/img/contacts/chat.png" alt="">
+                <p>message</p>
+            </div>
+            <div class="single_box">
+                <img src="../assets/img/contacts/phone.png" alt="">
+                <p>portable</p>
+            </div>
+            <div class="single_box">
+                <img src="../assets/img/contacts/video.png" alt="">
+                <p>vidéo</p>
+            </div>
+            <div class="single_box">
+                <img src="../assets/img/phone/star.png" alt="">
+                <p>favoris</p>
+            </div>
+        </div>
+        <div class="textbox">
+            <p class="textbox_head">portable</p>
+            <p class="textbox_content">{{contact.number | phoneFormat}}</p>
+        </div>
+        <div class="textbox">
+            <p class="textbox_head">Notes</p>
+            <p class="textbox_content">{{contact.note}}</p>
+        </div>
+    </div>
+</div>
+
+<app-home-bar></app-home-bar>

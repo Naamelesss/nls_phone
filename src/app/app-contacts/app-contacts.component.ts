@@ -13,6 +13,6 @@ export class AppContactsComponent implements OnInit {
   constructor(private contactsArrayService: AppsService) { }
 
   ngOnInit(): void {
-    this.contactsArray = this.contactsArrayService.contactsArray;
+    this.contactsArray = this.contactsArrayService.getAllContacts();
   }
 }
