@@ -100,3 +100,7 @@ img {
         }
     }
 }
+
+.black_item {
+    filter: brightness(0) saturate(100%)
+}
