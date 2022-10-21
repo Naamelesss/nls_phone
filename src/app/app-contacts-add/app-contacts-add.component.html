@@ -18,7 +18,8 @@
         </div>
         <input style="border-top: 1px solid lightgray;" placeholder="Prénom" aria-autocomplete="list" maxlength="26" value="" #name (input)="onChangeName(name.value, 'main')">
         <input placeholder="Nom" aria-autocomplete="list" maxlength="26" value="" #subname (input)="onChangeName(subname.value, 'sub')">
-        <input placeholder="Numéro" aria-autocomplete="list" type="number" value="" #number_ (input)="onChangeNumber(number_.value)">
+        <input placeholder="Numéro" aria-autocomplete="list" type="number" [value]="number" #number_ (input)="onChangeNumber(number_.value)">
+        <!-- <p>{{window.history.state.customData}}</p> -->
         <!-- maxlength="3" max="000" min="999" -->
         <textarea placeholder="Notes" aria-autocomplete="list" cols="54" rows="6" maxlength="250" #textnote (input)="onChangeNote(textnote.value)"></textarea>
     </div>

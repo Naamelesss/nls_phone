@@ -24,7 +24,7 @@ export class AppContactsAddComponent implements OnInit {
   ngOnInit(): void {
     this.firstName = '';
     this.lastName = '';
-    this.number = '';
+    this.number = window.history.state.customData + '';
     this.note = '';
 
     this.firstLetterName = "";
@@ -32,6 +32,28 @@ export class AppContactsAddComponent implements OnInit {
 
     this.contactExist = false;
   }
+
+
+  // getPreNumber(number_: string) {
+    // function getPreNumber2(number__: string) {
+    //   let number = number__;
+    // }
+    // let number = this.number;
+    // $timeout(function(){
+    //   // getPreNumber2(number_) 
+    //   this.number = number_;
+    // }, 500);
+
+    // this.sleep(100).then(() => this.number = number_)
+  // }
+  // sleep(milliseconds: number) {
+  //   let resolve: { (): any; (value: unknown): void; };
+  //   let promise = new Promise((_resolve) => {
+  //     // resolve = _resolve;
+  //   });
+  //   setTimeout(() => resolve(), milliseconds);
+  //   return promise;
+  // }
 
   onChangeName(name: string, type: string): void {
   if (type === 'main') {
