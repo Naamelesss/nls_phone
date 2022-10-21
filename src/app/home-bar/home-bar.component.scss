@@ -1,18 +1,28 @@
-.bar {
+* {
+    transition: 300ms ease-in-out;
+}
+
+.target_box {
     position: absolute;
+    height: 20px;
+    width: 160px;
+    top: 770px;
+    left: 130px;
+    border-radius: 6px;
+    background-color: transparent;
+
+    &:hover {
+        transform: translateY(-2px);
+        height: 22px;
+    }
+}
+
+.bar {
     background-color: black;
-    height: 5px;
+    height: 6px;
     width: 140px;
     border-radius: 6px;
-
-    top: 780px;
-    left: 130px;
-
+    position: relative;
+    top: 8px;
     margin: auto;
-
-    transition: transform 300ms ease-in-out; //opacity 150ms linear 100ms
-    &:hover {
-        // transform: scale(1.04);
-        transform: translateY(-2px);
-    }
 }
