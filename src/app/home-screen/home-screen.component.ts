@@ -13,7 +13,6 @@ export class HomeScreenComponent implements OnInit {
   constructor(private appsArrayService: AppsService) {}
 
   ngOnInit(): void {
-    this.appsArray = this.appsArrayService.appsArray;
+    this.appsArray = this.appsArrayService.getApps();
   }
-
 }
