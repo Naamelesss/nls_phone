@@ -14,7 +14,10 @@
     <div class="clavier">
         <p class="number">{{callNumber | phoneFormat}}</p>
         <div class="numberbox">
-            <p class="addnumber" [ngClass]="{numberon: callNumber !== '' && contactName === ''}">Ajouter ce numéro</p>
+            <p class="addnumber" [ngClass]="{numberon: callNumber !== '' && contactName === ''}" (click)="onAddNumber()">Ajouter ce numéro</p>
+            <div class="add_number" *ngIf="addNumberButton" (click)="onNewNumber()">
+                <p>Nouveau contact</p>
+            </div>
             <p class="addnumber" [ngClass]="{contactname: callNumber !== '' && contactName !== ''}">{{ contactName }}</p>
         </div>
 

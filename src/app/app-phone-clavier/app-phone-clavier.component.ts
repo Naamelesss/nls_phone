@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 import { AppsService } from '../services/apps.service';
 
 @Component({
@@ -8,14 +9,17 @@ import { AppsService } from '../services/apps.service';
 })
 export class AppPhoneClavierComponent implements OnInit {
 
-  constructor(private appService: AppsService) { }
+  constructor(private appService: AppsService,
+              private router: Router) { }
 
   callNumber!: string;
   contactName!: string;
+  addNumberButton!: boolean;
 
   ngOnInit(): void {
-    this.callNumber = '0645784512';
-    this.contactName = 'Alex Deckel';
+    this.callNumber = '';
+    this.contactName = '';
+    this.addNumberButton = false;
   }
 
   searchContact() {
@@ -31,6 +35,7 @@ export class AppPhoneClavierComponent implements OnInit {
   }
 
   onClickNumber(number_: string) {
+    this.addNumberButton = false;
     this.callNumber = this.callNumber + number_;
     this.searchContact();
   }
@@ -40,7 +45,21 @@ export class AppPhoneClavierComponent implements OnInit {
   }
 
   onReturn() {
+    this.addNumberButton = false;
     this.callNumber = this.callNumber.slice(0, -1);
     this.searchContact();
+  }
+  
+  onAddNumber() {
+    this.addNumberButton = true;
+  }
+
+  onNewNumber() {
+    const navigationExtas: NavigationExtras = {
+      state: {
+        customData: this.callNumber,
+      }
+    };
+    this.router.navigate(['phone/contacts/add'], navigationExtas)
   }
 }
