@@ -1,0 +1,54 @@
+* {
+    transition: 300ms ease-in-out;
+}
+
+.header {
+    position: absolute;
+    top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    margin-left: 30px;
+}
+
+.background {
+    position: relative;
+    top: 18px;
+    margin: auto;
+    height: 774px;
+    width: 358px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.button_div {
+    position: relative;
+    top: 100px;
+    height: 50px;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    &:hover {
+        background-color: lightgray;
+    }
+
+    margin-left: 30px;
+}
+
+.call_date {
+    color: gray;
+    font-size: 12px;
+    position: absolute;
+    text-align: right;
+    right: 30px;
+    top: 7px;
+}
+
+.call_name {
+    // margin-left: 30px;
+}
+
+.missed_call {
+    color: red;
+}

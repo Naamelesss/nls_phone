@@ -1,0 +1,12 @@
+<div class="background">
+    <div class="header">
+        <p>Récents</p>
+    </div>
+    <div class="button_div" *ngFor="let element of callList">
+        <p class="call_name" [ngClass]="{missed_call: element.missed}">{{element.label}}</p>
+        <p class="call_date">{{element.date | date:'dd/MM/yyyy à HH:mm'}}</p>
+    </div>
+</div>
+
+<app-home-bar></app-home-bar>
+<app-app-phone></app-app-phone>
