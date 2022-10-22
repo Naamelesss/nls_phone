@@ -20,4 +20,8 @@ export class AppContactEditComponent implements OnInit {
     this.contact = this.appService.searchContactByNumber(this.route.snapshot.params['number'])
     this.contactInitial = this.contact.firstName.charAt(0) + this.contact.lastName.charAt(0);
   }
+
+  onFavs() {
+    this.appService.changeContactFavs(this.contact.number);
+  }
 }

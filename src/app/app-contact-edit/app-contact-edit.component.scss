@@ -115,3 +115,7 @@
         text-align: center;
     }
 }
+
+.on_favorite {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(56%) saturate(3667%) hue-rotate(232deg) brightness(90%) contrast(106%);
+}

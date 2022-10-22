@@ -22,9 +22,9 @@
                 <img src="../assets/img/contacts/video.png" alt="">
                 <p>vidéo</p>
             </div>
-            <div class="single_box">
-                <img src="../assets/img/phone/star.png" alt="">
-                <p>favoris</p>
+            <div class="single_box" (click)="onFavs()">
+                <img [ngClass]="{on_favorite: contact.favoris}" src="../assets/img/phone/star.png" alt="">
+                <p [ngClass]="{on_favorite: contact.favoris}">favoris</p>
             </div>
         </div>
         <div class="textbox">
