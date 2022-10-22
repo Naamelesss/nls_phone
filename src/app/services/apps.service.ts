@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { AppsArray, ContactsArray } from "../models/apps.model";
+import { AppsArray, ContactsArray, RecentCallsArray } from "../models/apps.model";
 
 @Injectable({
     providedIn: 'root'
@@ -118,19 +118,60 @@ export class AppsService {
         firstName: "Alex",
         lastName: "Deckel",
         number: "0645784512",
-        note: "Les notes sont désormais fonctionel ! Mêmes les notes trèèèèèèèèèèèèèèèèèèèèsssss longues sont pris en charge."
+        note: "Les notes sont désormais fonctionel ! Mêmes les notes trèèèèèèèèèèèèèèèèèèèèsssss longues sont pris en charge.",
+        favoris: true
       },
       {
         firstName: "Larry",
         lastName: "",
         number: "0645784513",
-        note: "Larry's"
+        note: "Larry's",
+        favoris: false
       },
       {
         firstName: "Flavien",
         lastName: "",
         number: "03",
-        note: "Flavinouminou"
+        note: "Flavinouminou",
+        favoris: false
+      }
+    ]
+
+    recentCallsArray: RecentCallsArray[] = [
+      {
+        number: "03",
+        date: new Date,
+        missed: false,
+        type: 'call',
+        source: false,
+      },
+      {
+        number: "03",
+        date: new Date,
+        missed: true,
+        type: 'call',
+        source: false,
+      },
+      {
+        number: "0645742512",
+        date: new Date,
+        missed: false,
+        type: 'call',
+        source: false,
+      },
+      {
+        number: "0645442512",
+        date: new Date,
+        missed: true,
+        type: 'call',
+        source: false,
+      },
+      {
+        number: "0645784512",
+        date: new Date,
+        missed: true,
+        type: 'call',
+        source: false,
       }
     ]
 
@@ -143,13 +184,18 @@ export class AppsService {
       return this.appsArray;
     }
 
+    getRecentCalls(): RecentCallsArray[] {
+      return this.recentCallsArray
+    }
+
     addNewContact(firstName: string, lastName: string, number: string, note: string): void {
       // alert("Name : "+ firstName + " | LastName : " + lastName + " | Number : " + number + " | Note : " + note);
       const newRow = {
         firstName: firstName,
         lastName: lastName,
         number: number,
-        note: note
+        note: note,
+        favoris: false
       };
       this.contactsArray.push(newRow);
     }
@@ -161,5 +207,9 @@ export class AppsService {
       } else {
         return search;
       }
+    }
+    changeContactFavs(number: string): void {
+      const search = this.searchContactByNumber(number)
+      search.favoris = !search.favoris
     }
 }

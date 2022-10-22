@@ -10,4 +10,14 @@ export class ContactsArray {
     lastName!: string;
     number!: string;
     note!: string;
+    favoris!: boolean;
+}
+
+export class RecentCallsArray {
+    number!: string;
+    date!: Date;
+    missed!: boolean;
+    type!: 'call' | 'facetime';
+    source!: boolean;
+    label?: string;
 }
