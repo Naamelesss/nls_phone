@@ -20,6 +20,7 @@ import { AppContactsAddComponent } from './app-contacts-add/app-contacts-add.com
 import { GalleryComponent } from './gallery/gallery.component';
 import { AppContactEditComponent } from './app-contact-edit/app-contact-edit.component';
 import { DynamicIslandCallComponent } from './dynamic-island-call/dynamic-island-call.component';
+import { AppPhoneRecentComponent } from './app-phone-recent/app-phone-recent.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { DynamicIslandCallComponent } from './dynamic-island-call/dynamic-island
     AppContactsAddComponent,
     GalleryComponent,
     AppContactEditComponent,
-    DynamicIslandCallComponent
+    DynamicIslandCallComponent,
+    AppPhoneRecentComponent
   ],
   imports: [
     BrowserModule,
