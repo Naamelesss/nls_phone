@@ -5,6 +5,7 @@ import { AppContactsAddComponent } from "./app-contacts-add/app-contacts-add.com
 import { AppContactsComponent } from "./app-contacts/app-contacts.component";
 import { AppPhoneClavierComponent } from "./app-phone-clavier/app-phone-clavier.component";
 import { AppPhoneContactsComponent } from "./app-phone-contacts/app-phone-contacts.component";
+import { AppPhoneFavorisComponent } from "./app-phone-favoris/app-phone-favoris.component";
 import { AppPhoneRecentComponent } from "./app-phone-recent/app-phone-recent.component";
 import { GalleryComponent } from "./gallery/gallery.component";
 import { HomeScreenComponent } from "./home-screen/home-screen.component";
@@ -15,6 +16,7 @@ const routes: Routes = [
     {path: 'phone/contacts', component: AppPhoneContactsComponent, data: { animationState: 'app' }},
     {path: 'phone/contacts/add', component: AppContactsAddComponent, data: { animationState: 'app' }},
     {path: 'phone/recent', component: AppPhoneRecentComponent, data: { animationState: 'app' }},
+    {path: 'phone/favoris', component: AppPhoneFavorisComponent, data: { animationState: 'app' }},
     {path: 'contacts', component: AppContactsComponent, data: { animationState: 'app' }},
     {path: 'contacts/add', component: AppContactsAddComponent, data: { animationState: 'app' }},
     {path: 'contacts/edit/:number', component: AppContactEditComponent},
