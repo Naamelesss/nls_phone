@@ -1,0 +1,11 @@
+<div class="background">
+    <div class="header">
+        <p>Favoris</p>
+    </div>
+    <div class="button_div" *ngFor="let element of favsArray">
+        <p>{{element.firstName + ' ' + element.lastName}}</p>
+    </div>
+</div>
+
+<app-home-bar></app-home-bar>
+<app-app-phone></app-app-phone>
