@@ -133,7 +133,7 @@ export class AppsService {
         lastName: "",
         number: "03",
         note: "Flavinouminou",
-        favoris: false
+        favoris: true
       }
     ]
 
@@ -178,6 +178,15 @@ export class AppsService {
     // a faire pour apps
     getAllContacts(): ContactsArray[] {
       return this.contactsArray;
+    }
+
+    getAllFavs(): any {
+      const search = this.contactsArray.filter(search => search.favoris)
+      if (!search) {
+        return false;
+      } else {
+        return search;
+      }
     }
 
     getApps(): AppsArray[] {
