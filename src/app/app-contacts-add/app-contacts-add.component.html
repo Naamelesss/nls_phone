@@ -1,4 +1,4 @@
-<div class="background">
+<!-- <div class="background">
     <div class="header">
         <p class="textAO" routerLink="..">Annuler</p>
         <p class="textAO" style="color: black; left: 116px; top: 30px; font-size: 24px;">Nouveau contact</p>
@@ -19,10 +19,41 @@
         <input style="border-top: 1px solid lightgray;" placeholder="Prénom" aria-autocomplete="list" maxlength="26" value="" #name (input)="onChangeName(name.value, 'main')">
         <input placeholder="Nom" aria-autocomplete="list" maxlength="26" value="" #subname (input)="onChangeName(subname.value, 'sub')">
         <input placeholder="Numéro" aria-autocomplete="list" type="number" [value]="number" #number_ (input)="onChangeNumber(number_.value)">
-        <!-- <p>{{window.history.state.customData}}</p> -->
-        <!-- maxlength="3" max="000" min="999" -->
+        
         <textarea placeholder="Notes" aria-autocomplete="list" cols="54" rows="6" maxlength="250" #textnote (input)="onChangeNote(textnote.value)"></textarea>
     </div>
+</div> -->
+
+<!-- <p>{{window.history.state.customData}}</p> -->
+        <!-- maxlength="3" max="000" min="999" -->
+
+<div class="background">
+    <div class="header">
+        <p class="header_title">Nouveau contact</p>
+        <p class="header_subtitle" routerLink=".." *ngIf="firstName === '' || lastName === '' && number === ''">Annuler</p>
+        <p class="header_subtitle" routerLink=".." *ngIf="firstName !== '' || lastName !== '' && number !== ''">Ok</p>
+    </div>
+    <div class="button_div">
+        <input placeholder="Prénom" aria-autocomplete="list">
+    </div>
+    <div class="button_div">
+        <input placeholder="Nom" aria-autocomplete="list">
+    </div>
+    <div class="button_div">
+        <input placeholder="Numéro" aria-autocomplete="list">
+    </div>
+    <div class="button_div">
+        <input placeholder="Notes" aria-autocomplete="list">
+    </div>
+
+
+    <!-- <div class="">
+
+    </div> -->
+
+    <!-- <div class="button_div" *ngFor="let element of favsArray">
+        <p class="xx">{{element.firstName + ' ' + element.lastName}}</p>
+    </div> -->
 </div>
 
 <app-home-bar></app-home-bar>
