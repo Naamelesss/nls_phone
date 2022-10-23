@@ -21,6 +21,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { AppContactEditComponent } from './app-contact-edit/app-contact-edit.component';
 import { DynamicIslandCallComponent } from './dynamic-island-call/dynamic-island-call.component';
 import { AppPhoneRecentComponent } from './app-phone-recent/app-phone-recent.component';
+import { AppPhoneFavorisComponent } from './app-phone-favoris/app-phone-favoris.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { AppPhoneRecentComponent } from './app-phone-recent/app-phone-recent.com
     GalleryComponent,
     AppContactEditComponent,
     DynamicIslandCallComponent,
-    AppPhoneRecentComponent
+    AppPhoneRecentComponent,
+    AppPhoneFavorisComponent
   ],
   imports: [
     BrowserModule,
