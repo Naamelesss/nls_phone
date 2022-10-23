@@ -1,9 +1,7 @@
 <div class="background">
-    <!-- <app-app-contacts-add class="contact_add"></app-app-contacts-add> -->
-
     <div class="header">
-        <p style="color: black; left: 156px; top: 30px; font-size: 24px;">Contacts</p>
-        <p routerLink="add">+</p>
+        <p class="header_title">Contacts</p>
+        <p class="header_add" routerLink="add">+</p>
     </div>
     <div class="list">
         <app-app-contacts-list *ngFor="let element of contactsArray" [appContactList]="element"></app-app-contacts-list>
