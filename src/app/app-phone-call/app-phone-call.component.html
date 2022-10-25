@@ -1,0 +1,16 @@
+<img class="wallpaper" src="../assets/img/wallpaper.png" alt="Wallpaper">
+<div class="background">
+    <div class="top_text">
+        <p class="call_number">{{numberLabel}}</p>
+        <p class="call_text">{{callTime}}</p>
+        <!-- appel... -->
+        <!-- {{callTime}} -->
+    </div>
+    <div class="bottom_div" routerLink="../">
+        <img class="bottom_dismiss" src="../assets/img/call.png" alt="Dismiss">
+    </div>
+</div>
+
+<audio autoplay loop *ngIf="this.callTime === 'appel...'">
+    <source src="../assets/song/call.ogg" type="audio/ogg">
+</audio>
