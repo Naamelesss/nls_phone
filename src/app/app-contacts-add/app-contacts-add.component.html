@@ -30,20 +30,29 @@
 <div class="background">
     <div class="header">
         <p class="header_title">Nouveau contact</p>
-        <p class="header_subtitle" routerLink=".." *ngIf="firstName === '' || lastName === '' && number === ''">Annuler</p>
-        <p class="header_subtitle" routerLink=".." *ngIf="firstName !== '' || lastName !== '' && number !== ''">Ok</p>
+        <!-- <p class="header_subtitle" routerLink=".." *ngIf="(firstName === '' || lastName === '') && number === ''">Annuler</p>
+        <p class="header_subtitle" routerLink=".." *ngIf="(firstName !== '' || lastName !== '') && number !== ''">Ok</p> -->
+    </div>
+    <div class="sub_header">
+        <div class="round">
+            <img *ngIf="firstLetterName === '' &&  secLetterName === ''" src="../assets/img/phone/user.png" alt="Contact Logo">
+            <div class="text_round" *ngIf="firstLetterName !== '' ||  secLetterName !== ''">
+                <p>{{firstLetterName + secLetterName | uppercase}}</p>
+            </div>
+        </div>
     </div>
     <div class="button_div">
-        <input placeholder="Prénom" aria-autocomplete="list">
+        <input placeholder="Prénom" aria-autocomplete="none" #name (input)="onChangeName(name.value, 'main')">
     </div>
     <div class="button_div">
-        <input placeholder="Nom" aria-autocomplete="list">
+        <input placeholder="Nom" aria-autocomplete="none" #subname (input)="onChangeName(subname.value, 'sub')">
     </div>
     <div class="button_div">
-        <input placeholder="Numéro" aria-autocomplete="list">
+        <input placeholder="Numéro" aria-autocomplete="none" [value]="number" #number_ (input)="onChangeNumber(number_.value)">
     </div>
-    <div class="button_div">
-        <input placeholder="Notes" aria-autocomplete="list">
+    <div class="button_div" style="height: 100px;">
+        <!-- <input placeholder="Notes" aria-autocomplete="list" #textnote (input)="onChangeNote(textnote.value)"> -->
+        <textarea placeholder="Notes" aria-autocomplete="none" cols="54" rows="4" maxlength="260" #textnote (input)="onChangeNote(textnote.value)"></textarea>
     </div>
 
 

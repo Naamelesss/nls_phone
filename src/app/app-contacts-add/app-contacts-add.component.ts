@@ -22,13 +22,18 @@ export class AppContactsAddComponent implements OnInit {
   contactExist!: boolean;
 
   ngOnInit(): void {
+    let receiveData = window.history.state.customData;
+    if (!receiveData) {
+      receiveData = ''
+    }
+
     this.firstName = '';
     this.lastName = '';
-    this.number = window.history.state.customData + '';
+    this.number = receiveData + '';
     this.note = '';
 
-    this.firstLetterName = "";
-    this.secLetterName = "";
+    this.firstLetterName = '';
+    this.secLetterName = '';
 
     this.contactExist = false;
   }
@@ -55,7 +60,7 @@ export class AppContactsAddComponent implements OnInit {
   //   return promise;
   // }
 
-  onChangeName(name: string, type: string): void {
+  onChangeName(name: string, type: 'main' | 'sub'): void {
   if (type === 'main') {
       this.firstName = name;
       this.firstLetterName = name.charAt(0);
