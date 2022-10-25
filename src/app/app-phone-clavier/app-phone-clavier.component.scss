@@ -128,7 +128,7 @@
         &:hover {
             // filter: grayscale(50%);
             // opacity: 0.7;
-            filter: contrast(0.75);
+            filter: brightness(0.75); // contrast
         }
     }
     .imgbutbackspace {
@@ -140,7 +140,7 @@
         &:hover {
             // filter: grayscale(100%);
             // opacity: 0.7;
-            filter: contrast(0.75);
+            filter: brightness(0.75); // contrast
         }
     }
     .hiddenbackspace {
