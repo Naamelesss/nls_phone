@@ -132,7 +132,7 @@ export class AppsService {
         firstName: "Flavien",
         lastName: "",
         number: "03",
-        note: "Flavinouminou",
+        note: "",
         favoris: true
       }
     ]

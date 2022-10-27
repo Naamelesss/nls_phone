@@ -23,7 +23,9 @@ const routes: Routes = [
     {path: 'contacts/edit/:number', component: AppContactEditComponent},
     {path: 'gallery', component: GalleryComponent, data: { animationState: 'app' }},
 
-    {path: 'call', component: AppPhoneCallComponent, data: { animationState: 'app' }}
+    {path: 'phone/clavier/call', component: AppPhoneCallComponent, data: { animationState: 'app' }},
+    {path: 'phone/recent/call', component: AppPhoneCallComponent, data: { animationState: 'app' }},
+    {path: 'phone/favoris/call', component: AppPhoneCallComponent, data: { animationState: 'app' }}
 ]
 
 @NgModule({
