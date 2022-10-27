@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppsService } from '../services/apps.service';
 
 @Component({
   selector: 'app-app-phone-call',
@@ -7,13 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppPhoneCallComponent implements OnInit {
 
-  constructor() { }
+  constructor(private appService: AppsService) { }
 
   numberLabel!: string;
   callTime!: string;
 
   ngOnInit(): void {
-    this.numberLabel = 'Alex Deckel'
+    const receiveData = window.history.state.customData;
+
+    const contact = this.appService.searchContactByNumber(receiveData)
+    if (contact) {
+      this.numberLabel = contact.firstName + ' ' + contact.lastName;
+    } else {
+      this.numberLabel = receiveData;
+    }
+
     this.callTime = 'appel...'
   }
 }
