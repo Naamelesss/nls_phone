@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 import { ContactsArray } from '../models/apps.model';
 import { AppsService } from '../services/apps.service';
 
@@ -9,7 +10,8 @@ import { AppsService } from '../services/apps.service';
 })
 export class AppPhoneFavorisComponent implements OnInit {
 
-  constructor(private appService: AppsService) {}
+  constructor(private appService: AppsService,
+              private router: Router) {}
 
   favsArray!: ContactsArray[];
 
@@ -18,5 +20,14 @@ export class AppPhoneFavorisComponent implements OnInit {
     // for (let i = 0; i < 10; i++) {
     //   console.log(this.favsArray[i].favoris)
     // }
+  }
+
+  onCall(number: string) {
+    const navigationExtas: NavigationExtras = {
+      state: {
+        customData: number,
+      }
+    };
+    this.router.navigate(['/phone/favoris/call'], navigationExtas)
   }
 }

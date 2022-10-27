@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 import { RecentCallsArray } from '../models/apps.model';
 import { AppsService } from '../services/apps.service';
 
@@ -9,7 +10,8 @@ import { AppsService } from '../services/apps.service';
 })
 export class AppPhoneRecentComponent implements OnInit {
 
-  constructor(private appService: AppsService) {}
+  constructor(private appService: AppsService,
+              private router: Router) {}
 
   callList!: RecentCallsArray[];
 
@@ -24,5 +26,18 @@ export class AppPhoneRecentComponent implements OnInit {
         this.callList[i].label = this.callList[i].number;
       }
     }
+  }
+
+  onHoverDiv(element: RecentCallsArray) {
+    element.missed = false;
+  }
+
+  onCall(number: string) {
+    const navigationExtas: NavigationExtras = {
+      state: {
+        customData: number,
+      }
+    };
+    this.router.navigate(['/phone/recent/call'], navigationExtas)
   }
 }

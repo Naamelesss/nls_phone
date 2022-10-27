@@ -41,7 +41,14 @@ export class AppPhoneClavierComponent implements OnInit {
   }
 
   onCall() {
-    console.log('Call number #', this.callNumber)
+    if (this.callNumber !== '') {
+      const navigationExtas: NavigationExtras = {
+        state: {
+          customData: this.callNumber,
+        }
+      };
+      this.router.navigate(['/phone/clavier/call'], navigationExtas)
+    }
   }
 
   onReturn() {

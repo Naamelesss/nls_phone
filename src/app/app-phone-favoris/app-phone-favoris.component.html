@@ -2,7 +2,7 @@
     <div class="header">
         <p>Favoris</p>
     </div>
-    <div class="button_div" *ngFor="let element of favsArray">
+    <div class="button_div" *ngFor="let element of favsArray" (click)="onCall(element.number)">
         <p>{{element.firstName + ' ' + element.lastName}}</p>
     </div>
 </div>
