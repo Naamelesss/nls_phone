@@ -20,6 +20,12 @@ export class AppsService {
         nameShowed: true
       },
       {
+        icon: "../assets/img/icon/message.png",
+        name: "Messages",
+        route: "messages",
+        nameShowed: true
+      },
+      {
         icon: "../assets/img/icon/photos.png",
         name: "Photos",
         route: "gallery",

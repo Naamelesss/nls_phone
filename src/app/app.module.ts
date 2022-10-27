@@ -23,6 +23,7 @@ import { DynamicIslandCallComponent } from './dynamic-island-call/dynamic-island
 import { AppPhoneRecentComponent } from './app-phone-recent/app-phone-recent.component';
 import { AppPhoneFavorisComponent } from './app-phone-favoris/app-phone-favoris.component';
 import { AppPhoneCallComponent } from './app-phone-call/app-phone-call.component';
+import { AppMessagesComponent } from './app-messages/app-messages.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { AppPhoneCallComponent } from './app-phone-call/app-phone-call.component
     DynamicIslandCallComponent,
     AppPhoneRecentComponent,
     AppPhoneFavorisComponent,
-    AppPhoneCallComponent
+    AppPhoneCallComponent,
+    AppMessagesComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { AppContactEditComponent } from "./app-contact-edit/app-contact-edit.component";
 import { AppContactsAddComponent } from "./app-contacts-add/app-contacts-add.component";
 import { AppContactsComponent } from "./app-contacts/app-contacts.component";
+import { AppMessagesComponent } from "./app-messages/app-messages.component";
 import { AppPhoneCallComponent } from "./app-phone-call/app-phone-call.component";
 import { AppPhoneClavierComponent } from "./app-phone-clavier/app-phone-clavier.component";
 import { AppPhoneContactsComponent } from "./app-phone-contacts/app-phone-contacts.component";
@@ -26,7 +27,9 @@ const routes: Routes = [
 
     {path: 'phone/clavier/call', component: AppPhoneCallComponent, data: { animationState: 'app' }},
     {path: 'phone/recent/call', component: AppPhoneCallComponent, data: { animationState: 'app' }},
-    {path: 'phone/favoris/call', component: AppPhoneCallComponent, data: { animationState: 'app' }}
+    {path: 'phone/favoris/call', component: AppPhoneCallComponent, data: { animationState: 'app' }},
+
+    {path: 'messages', component: AppMessagesComponent, data: { animationState: 'app' }}
 ]
 
 @NgModule({
