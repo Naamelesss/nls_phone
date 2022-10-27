@@ -16,11 +16,12 @@ const routes: Routes = [
     {path: 'phone/clavier', component: AppPhoneClavierComponent, data: { animationState: 'app' }},
     {path: 'phone/contacts', component: AppPhoneContactsComponent, data: { animationState: 'app' }},
     {path: 'phone/contacts/add', component: AppContactsAddComponent, data: { animationState: 'app' }},
+    {path: 'phone/contacts/edit/:number', component: AppContactEditComponent, data: { animationState: 'app' }},
     {path: 'phone/recent', component: AppPhoneRecentComponent, data: { animationState: 'app' }},
     {path: 'phone/favoris', component: AppPhoneFavorisComponent, data: { animationState: 'app' }},
     {path: 'contacts', component: AppContactsComponent, data: { animationState: 'app' }},
     {path: 'contacts/add', component: AppContactsAddComponent, data: { animationState: 'app' }},
-    {path: 'contacts/edit/:number', component: AppContactEditComponent},
+    {path: 'contacts/edit/:number', component: AppContactEditComponent, data: { animationState: 'app' }},
     {path: 'gallery', component: GalleryComponent, data: { animationState: 'app' }},
 
     {path: 'phone/clavier/call', component: AppPhoneCallComponent, data: { animationState: 'app' }},

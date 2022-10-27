@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AppsService } from '../services/apps.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { AppsService } from '../services/apps.service';
 })
 export class AppContactsAddComponent implements OnInit {
 
-  constructor(private appService: AppsService, private router: Router) { }
+  constructor(private appService: AppsService, private router: Router, private route: ActivatedRoute) { }
 
   firstName!: string;
   lastName!: string;
@@ -82,7 +82,9 @@ export class AppContactsAddComponent implements OnInit {
       const search = this.appService.searchContactByNumber(this.number)
       if (!search) {
         this.appService.addNewContact(this.firstName, this.lastName, this.number, this.note);
-        this.router.navigateByUrl('contacts')
+        // this.router.navigateByUrl('')
+        // alert(this.route)
+        this.router.navigate(["../"], {relativeTo: this.route});
       } else {
         this.contactExist = true;
       }
