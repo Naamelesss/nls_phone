@@ -30,8 +30,10 @@
 <div class="background">
     <div class="header">
         <p class="header_title">Nouveau contact</p>
-        <!-- <p class="header_subtitle" routerLink=".." *ngIf="(firstName === '' || lastName === '') && number === ''">Annuler</p>
-        <p class="header_subtitle" routerLink=".." *ngIf="(firstName !== '' || lastName !== '') && number !== ''">Ok</p> -->
+        <p class="header_subtitle" routerLink=".." *ngIf="number === '' || firstName + lastName === ''">Annuler</p>
+        <p class="header_subtitle" (click)="onValidateNewContact()" *ngIf="number !== '' && firstName + lastName !== ''">Ok</p>
+        <!-- <p>[{{firstName + lastName}}] | [{{number}}]</p> -->
+        
     </div>
     <div class="sub_header">
         <div class="round">
