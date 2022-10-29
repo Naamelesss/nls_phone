@@ -1,6 +1,8 @@
+* {
+    transition: 300ms ease-in-out;
+}
+
 .applist {
-    // background-color: blue;
-    // border: dashed 0.1px;
     display: inline-block;
     width: 83.5px;
     height: 90px;
@@ -14,11 +16,9 @@
 }
 
 .image {
-    // position: relative;
     width: 48px;
     padding: 18px;
     
-    transition: transform 150ms ease-in-out; //opacity 150ms linear 100ms
     &:hover {
         transform: scale(1.04);
     }

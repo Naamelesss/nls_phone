@@ -1,3 +1,6 @@
+* {
+    transition: 300ms ease-in-out;
+}
 
 img {
     position: absolute;
@@ -5,7 +8,6 @@ img {
 }
 
 .app {
-    // background-color: red;
     position: absolute;
     left: 33px;
     top: 80px;
@@ -13,71 +15,27 @@ img {
     height: 530px;
 }
 
-.blurappbar {
-    position: absolute;
-    width: 335px;
-    height: 100px;
-    top: 680px;
-    right: 32px;
-    border-radius: 38px;
-
-    // background-color: red;
-    // background: rgba(194, 194, 194, 0.5);
-
-    // filter: blur(5px);
-}
 .appbar {
     position: relative;
-    width: 335px;
-    height: 100px;
-    top: 680px;
-    border-radius: 38px;
+    width: 330px;
+    height: 85px;
+    top: 695px;
+    border-radius: 35px;
     margin: auto;
-    // filter: blur(0px);
+    backdrop-filter: saturate(180%) blur(10px);
+    background-color: rgba(194, 194, 194, 0.6);
 
-    // background-color: lightgray;
-    background: rgba(194, 194, 194, 0.5);
-    // opacity: 0.4;
-    // border-style: dashed;
-}
-
-// @keyframes hold_app {
-//     from {transform: translate(0, 0);}
-//     to {transform: translate(0, -2px);}
-//   }
-
-.bottom_app {
-    // display: flex;
-    // flex-wrap: wrap;
-
-    // padding: 5px;
-    // margin: 5px 5px;
-    img {
-        position: relative;
-        width: 64px;
-        margin: 19px 7px;
-        left: 10px;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    div {
+        height: 48px;
+        width: 48px;
         &:hover {
-            // transform: translate(0, -2px);
-            // transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms;
-            // border-style: ridge;
-            // animation-name: hold_app;
-            // animation-duration: 0.2s;
+            scale: 1.04;
+        }
+        img {
+            width: 48px;
         }
     }
 }
-
-// .iphone {
-//     position: absolute;
-//     width: 50%;
-//     bottom: 50px;
-//     right: 50px;
-// }
-
-// .wallpaper{
-//     position: absolute;
-//     width: 50%;
-//     bottom: 50px;
-//     right: 50px;
-// }
