@@ -1,3 +1,197 @@
-.visible {
-    display: none;
+@keyframes startIsland {
+    0% {
+        // border-top-left-radius: 0px;
+        // border-top-right-radius: 0px;
+        height: 30px;
+        width: 80px;
+    }
+    // 50% {
+    //     // border-top-left-radius: 40px;
+    //     // border-top-right-radius: 40px;
+    //     // height: 30px;
+    //     width: 335px;
+    // }
+    100% {
+        height: 80px;
+        width: 335px;
+        
+        border-radius: 38px;
+    }
+  }
+
+  @keyframes imgAnim {
+    0% {
+
+    }
+    25% {
+        // border-radius: 100%;
+        width: 0px;
+    }
+    100% {
+        border-radius: 25px;
+        width: 50px;
+    }
+  }
+
+  @keyframes takeAnim {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50% {
+        left: 40px;
+        width: 30px;
+        opacity: 0;
+    }
+    100% {
+        left: 300px;
+        width: 30px;
+        opacity: 1;
+    }
+  }
+
+  @keyframes declineAnim {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50% {
+        left: 40px;
+        width: 30px;
+        opacity: 0;
+    }
+    100% {
+        left: 250px;
+        width: 30px;
+        opacity: 1;
+    }
+  }
+
+.block {
+    height: 30px;
+    width: 80px;
+    // border-radius: 15px;
+    margin: auto;
+
+    background-color: black;
+
+    position: relative;
+    top: 11px;
+    // top: 474px;
+    // right: -311px;
+    // top: 474px;
+    // right: -42px;
+
+    z-index: 1;
+
+    overflow: hidden;
+
+    // &:hover {
+    //     // animation: startIsland, 150ms ease-in-out;
+    //     // transition-delay: 0ms;
+        
+    // }
+    animation: startIsland 0.4s ease-in-out forwards;
 }
+
+.base_img {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    border-radius: 100%;
+    width: 0px;
+    margin: auto;
+    transform: translate(-50%, -50%);
+
+    animation: imgAnim 0.8s ease-in-out forwards;
+    // transition: scale 300ms ease-in-out;
+}
+
+.contactImg {
+    filter: brightness(0) saturate(100%) invert(63%) sepia(5%) saturate(566%) hue-rotate(183deg) brightness(92%) contrast(91%);
+}
+
+.phone_take {
+    width: 0;
+    animation: takeAnim 1.2s ease-in-out forwards;
+    filter: brightness(0) saturate(100%) invert(74%) sepia(26%) saturate(2208%) hue-rotate(79deg) brightness(91%) contrast(82%);
+}
+
+.phone_decline {
+    width: 0;
+    animation: declineAnim 1.4s ease-in-out forwards;
+    transform: rotate(135deg);
+    top: 26px;
+    filter: brightness(0) saturate(100%) invert(32%) sepia(53%) saturate(6420%) hue-rotate(351deg) brightness(109%) contrast(101%);
+}
+
+.phone_take:hover, .phone_decline:hover {
+    scale: 1.04;
+}
+
+.call_type {
+    position: absolute;
+    left: 70px;
+    top: 14px;
+    color: grey;
+}
+
+.call_name {
+    position: absolute;
+    left: 70px;
+    top: 28px;
+    color: lightgray;
+    font-size: 18px;
+}
+
+.msg_type {
+    position: absolute;
+    left: 70px;
+    top: 14px;
+    color: lightgray;
+}
+
+.msg_name {
+    position: absolute;
+    left: 70px;
+    top: 28px;
+    color: white;
+    font-size: 18px;
+}
+
+// @keyframes hideIsland {
+//     0% {
+//         height: 80px;
+//         width: 335px;
+        
+//         border-radius: 38px;
+//     }
+//     100% {
+//         height: 30px;
+//         width: 80px;
+//     }
+// }
+// @keyframes hideIslandImg {
+//     0% {
+//         scale: 1.0;
+//     }
+//     100% {
+//         scale: 0.4;
+//     }
+//   }
+
+// .hideDynamic {
+    // display: none;
+    // div {
+        // animation: hideIsland 0.4s ease-in-out forwards;
+        // .hideDynamicImg {
+            // animation: hideIslandImg 0.4s ease-in-out forwards;
+        // }
+    // }
+    // img {
+        
+    // }
+    // height: 30px;
+    // width: 80px;
+// }
+

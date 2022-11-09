@@ -1,1 +1,26 @@
-<!-- <app-dynamic-island-call [ngClass]="{ visible: notifcall }"></app-dynamic-island-call> -->
+<!-- <app-dynamic-island-call [ngClass]="{ invisible: !displayDynamic }"></app-dynamic-island-call> -->
+<!-- [ngClass]="{ hideDynamic: !displayDynamic }" -->
+
+<div class="block" *ngIf="displayDynamic">
+    <div *ngIf="dynamicType === 'call'">
+        <img class="base_img contactImg" src="../assets/img/phone/user.png">
+        <p class="call_type">mobile</p>
+        <p class="call_name">{{labelText}}</p>
+    
+        <img class="base_img phone_take" src="../assets/img/call.png" (click)="onAcceptCall()">
+        <img class="base_img phone_decline" src="../assets/img/call.png" (click)="onDeclineCall()">
+    </div>
+    <div *ngIf="dynamicType === 'message'">
+        <img class="base_img" src="../assets/img/icon/message.png">
+        <p class="msg_type">{{labelText}}</p>
+        <p class="msg_name">{{msgText}}</p>
+
+        <!-- <img class="base_img phone_take" src="../assets/img/call.png" (click)="onAcceptCall()">
+        <img class="base_img phone_decline" src="../assets/img/call.png" (click)="onDeclineCall()"> -->
+    </div>
+    
+
+    <!-- <audio autoplay loop>
+        <source src="../assets/song/ringtone.ogg" type="audio/ogg">
+    </audio> -->
+</div>

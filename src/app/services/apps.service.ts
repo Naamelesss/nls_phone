@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { Subject } from "rxjs";
 import { AppsArray, ContactsArray, RecentCallsArray } from "../models/apps.model";
 
 @Injectable({
@@ -226,5 +227,20 @@ export class AppsService {
     changeContactFavs(number: string): void {
       const search = this.searchContactByNumber(number)
       search.favoris = !search.favoris
+    }
+
+    private dynamicNotificationSource = new Subject<string>;
+    private dynamicNotificationNumber = new Subject<string>;
+    private dynamicNotificationString = new Subject<string>;
+    private dynamicNotificationUrlImg = new Subject<string>;
+    dynamicNotification$ = this.dynamicNotificationSource.asObservable();
+    dynamicNotificationNum$ = this.dynamicNotificationNumber.asObservable();
+    dynamicNotificationStr$ = this.dynamicNotificationString.asObservable();
+    dynamicNotificationUImg$ = this.dynamicNotificationUrlImg.asObservable();
+    sendDynamicNotification(type: 'appel' | 'message', number: string, text: string, urlImg: string) {
+      this.dynamicNotificationNumber.next(number)
+      this.dynamicNotificationString.next(text)
+      this.dynamicNotificationUrlImg.next(urlImg)
+      this.dynamicNotificationSource.next(type);
     }
 }

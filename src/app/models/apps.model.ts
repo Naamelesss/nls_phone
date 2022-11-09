@@ -21,3 +21,9 @@ export class RecentCallsArray {
     source!: boolean;
     label?: string;
 }
+
+export class IncomeNotif {
+    number!: string;
+    text!: string;
+    imgUrl!:string;
+}
