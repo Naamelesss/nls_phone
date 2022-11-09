@@ -4,21 +4,25 @@
 <p form class="base">Dev Tools</p>
 
 <form class="base">
-    Numéro: <input type="number" name="number" id="number"/>
+    Numéro: <input type="text" name="number" id="number"/>
     <input class="button" value="Appeler" (click)="onCall()"/>
+    <input class="button" value="Raccrocher" (click)="onFinish()"/>
 </form>
 
 <form class="base">
-    Numéro: <input type="number" name="number" id="number"/>
-    Message: <input type="text" name="message" id="text"/>
+    Numéro: <input type="text" name="number" id="number2"/>
+    Message: <input type="text" name="message" id="text2"/>
     <input class="button" value="Envoyer un message" (click)="onMsg()"/>
 </form>
 
 <form class="base">
-    Name: <input type="text" name="number" id="number"/>
-    Message: <input type="text" name="message" id="text"/>
-    Img (url): <input type="text" name="img" id="imgUrl"/>
+    Name: <input type="text" name="number" id="number3"/>
+    Message: <input type="text" name="message" id="text3"/>
+    Img (url): <input type="text" name="img" id="imgUrl3"/>
     <input class="button" value="Envoyer une notif" (click)="onNotif()"/>
 </form>
 
 </div>
+
+<!-- <app-dynamic-island-call *ngIf="notif" [incomeNotif]="incomeNotif" (finishNotif)="onFinish()"></app-dynamic-island-call> -->
+<!-- style="position:relative; margin-top: 563px; right:60px; z-index: 1;" -->
