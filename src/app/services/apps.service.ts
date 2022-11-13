@@ -11,24 +11,28 @@ export class AppsService {
       {
         icon: "../assets/img/icon/phone.png",
         name: "Téléphone",
+        notification: 3,
         route: "phone/clavier",
         nameShowed: true
       },
       {
         icon: "../assets/img/icon/contacts.png",
         name: "Contacts",
+        notification: 0,
         route: "contacts",
         nameShowed: true
       },
       {
         icon: "../assets/img/icon/message.png",
         name: "Messages",
+        notification: 2,
         route: "messages",
         nameShowed: true
       },
       {
         icon: "../assets/img/icon/photos.png",
         name: "Photos",
+        notification: 0,
         route: "gallery",
         nameShowed: true
       },
@@ -252,6 +256,16 @@ export class AppsService {
     changeContactFavs(number: string): void {
       const search = this.searchContactByNumber(number)
       search.favoris = !search.favoris
+    }
+    notificationNumber(type: 'add' | 'remove',  app: string, number: number) {
+      const search = this.appsArray.find(search => search.name === app);
+      if (search) {
+        if (type === 'add') {
+          search.notification = search.notification+number;
+      } else if (type === 'remove') {
+          search.notification = search.notification-number;
+        }
+      }
     }
 
     private dynamicNotificationSource = new Subject<string>;

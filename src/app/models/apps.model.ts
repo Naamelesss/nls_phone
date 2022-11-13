@@ -1,6 +1,7 @@
 export class AppsArray {
     icon!: string;
     name!: string;
+    notification!: number;
     route!: string;
     nameShowed!: boolean;
 }

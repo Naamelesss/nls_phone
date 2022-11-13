@@ -29,7 +29,10 @@ export class AppPhoneRecentComponent implements OnInit {
   }
 
   onHoverDiv(element: RecentCallsArray) {
-    element.missed = false;
+    if (element.missed) {
+      element.missed = false;
+      this.appService.notificationNumber('remove', 'Téléphone', 1)
+    }
   }
 
   onCall(number: string) {

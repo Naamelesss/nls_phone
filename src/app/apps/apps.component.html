@@ -1,4 +1,10 @@
 <div (click)="onClickApp()" class="applist">
     <img [src]="apps.icon" class="image">
     <p *ngIf="apps.nameShowed">{{apps.name}}</p>
+
+    <div class="notification" *ngIf="apps.notification">
+        <div class="notification_bull">
+            <p [ngClass]="{p_padding: apps.notification > 9}">{{apps.notification}}</p>
+        </div>
+    </div>
 </div>
