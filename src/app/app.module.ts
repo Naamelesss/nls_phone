@@ -24,6 +24,7 @@ import { AppPhoneRecentComponent } from './app-phone-recent/app-phone-recent.com
 import { AppPhoneFavorisComponent } from './app-phone-favoris/app-phone-favoris.component';
 import { AppPhoneCallComponent } from './app-phone-call/app-phone-call.component';
 import { AppMessagesComponent } from './app-messages/app-messages.component';
+import { SingleMessageComponent } from './single-message/single-message.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { AppMessagesComponent } from './app-messages/app-messages.component';
     AppPhoneRecentComponent,
     AppPhoneFavorisComponent,
     AppPhoneCallComponent,
-    AppMessagesComponent
+    AppMessagesComponent,
+    SingleMessageComponent
   ],
   imports: [
     BrowserModule,

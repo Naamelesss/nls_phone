@@ -1,0 +1,14 @@
+<div class="base">
+    <div class="button_div">
+        <div class="contact_logo">
+            <img src="../assets/img/phone/user.png" alt="Contact Logo">
+        </div>
+        <div class="message_div">
+            <p class="main_title">{{labelName}}</p>
+            <p class="message_container">{{message.message}}</p>
+        </div>
+        <p class="date">{{message.date | date: 'dd/MM/yyyy à HH:mm' }}</p>
+        <p class="arrow">></p>
+    </div>
+    <div class="non_lue" *ngIf="!message.lu"></div>
+</div>

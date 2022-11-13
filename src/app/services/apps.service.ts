@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Subject } from "rxjs";
-import { AppsArray, ContactsArray, RecentCallsArray } from "../models/apps.model";
+import { AppsArray, ContactsArray, MessagesArray, RecentCallsArray } from "../models/apps.model";
 
 @Injectable({
     providedIn: 'root'
@@ -150,37 +150,62 @@ export class AppsService {
         date: new Date,
         missed: false,
         type: 'call',
-        source: false,
+        source: false
       },
       {
         number: "03",
         date: new Date,
         missed: true,
         type: 'call',
-        source: false,
+        source: false
       },
       {
         number: "0645742512",
         date: new Date,
         missed: false,
         type: 'call',
-        source: false,
+        source: false
       },
       {
         number: "0645442512",
         date: new Date,
         missed: true,
         type: 'call',
-        source: false,
+        source: false
       },
       {
         number: "0645784512",
         date: new Date,
         missed: true,
         type: 'call',
-        source: false,
+        source: false
       }
     ]
+
+    messagesArray: MessagesArray[] = [
+      {
+        number: "03",
+        message: "Go MCDO Mec",
+        date: new Date,
+        lu: false
+      },
+      {
+        number: "0355488756",
+        message: "Vien comico urgent",
+        date: new Date,
+        lu: true
+      },
+      {
+        number: "0697785462",
+        message: "C'est moi Larry",
+        date: new Date,
+        lu: false
+      }
+    ]
+
+    getAllMessages(): MessagesArray[] {
+      return this.messagesArray;
+    }
 
     // a faire pour apps
     getAllContacts(): ContactsArray[] {

@@ -22,6 +22,13 @@ export class RecentCallsArray {
     label?: string;
 }
 
+export class MessagesArray {
+    number!: string;
+    message!: string;
+    date!: Date;
+    lu!: boolean;
+}
+
 export class IncomeNotif {
     number!: string;
     text!: string;
