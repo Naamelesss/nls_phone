@@ -66,6 +66,22 @@
         opacity: 1;
     }
   }
+  @keyframes declineAnim_MSG {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50% {
+        left: 40px;
+        width: 30px;
+        opacity: 0;
+    }
+    100% {
+        left: 266px;
+        width: 30px;
+        opacity: 1;
+    }
+  }
 
 .block {
     height: 30px;
@@ -111,7 +127,7 @@
     filter: brightness(0) saturate(100%) invert(63%) sepia(5%) saturate(566%) hue-rotate(183deg) brightness(92%) contrast(91%);
 }
 
-.phone_take {
+.take {
     width: 0;
     animation: takeAnim 1.2s ease-in-out forwards;
     filter: brightness(0) saturate(100%) invert(74%) sepia(26%) saturate(2208%) hue-rotate(79deg) brightness(91%) contrast(82%);
@@ -122,6 +138,12 @@
     animation: declineAnim 1.4s ease-in-out forwards;
     transform: rotate(135deg);
     top: 26px;
+    filter: brightness(0) saturate(100%) invert(32%) sepia(53%) saturate(6420%) hue-rotate(351deg) brightness(109%) contrast(101%);
+}
+
+.msg_decline {
+    width: 0;
+    animation: declineAnim_MSG 1.4s ease-in-out forwards;
     filter: brightness(0) saturate(100%) invert(32%) sepia(53%) saturate(6420%) hue-rotate(351deg) brightness(109%) contrast(101%);
 }
 

@@ -116,7 +116,7 @@ export class DynamicIslandComponent implements OnInit, OnDestroy {
       this.router.navigate(['/phone/clavier/call'], navigationExtas)
     }
   }
-  onDeclineCall() {
+  onCloseNotif() {
     this.closeDynamic();
   }
 
