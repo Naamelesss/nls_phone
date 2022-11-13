@@ -194,6 +194,18 @@ export class AppsService {
         lu: false
       },
       {
+        number: "03",
+        message: "Allo",
+        date: new Date,
+        lu: false
+      },
+      {
+        number: "03",
+        message: "Repp",
+        date: new Date,
+        lu: false
+      },
+      {
         number: "0355488756",
         message: "Vien comico urgent",
         date: new Date,
@@ -207,9 +219,24 @@ export class AppsService {
       }
     ]
 
-    getAllMessages(): MessagesArray[] {
-      return this.messagesArray;
+    getRecentConversation(): MessagesArray[] {
+      const search: any = [];
+      const search2: any = [];
+      var i:number;
+      for(i = this.messagesArray.length-1; i>=0; i--) {
+        if (!search[this.messagesArray[i].number]) {
+          let position = i-this.messagesArray.length;
+          // console.log(position);
+          search[this.messagesArray[i].number] = true;
+          // search2.push(this.messagesArray[i]);
+          search2.splice(position, 0, this.messagesArray[i]);
+        }
+      }
+      return(search2);
     }
+    // getAllMessages(): MessagesArray[] {
+    //   return this.messagesArray;
+    // }
 
     // a faire pour apps
     getAllContacts(): ContactsArray[] {

@@ -14,7 +14,7 @@ export class AppMessagesComponent implements OnInit {
   messagesArray!: MessagesArray[];
 
   ngOnInit(): void {
-    this.messagesArray = this.appService.getAllMessages();
+    this.messagesArray = this.appService.getRecentConversation();
   }
 
 }
