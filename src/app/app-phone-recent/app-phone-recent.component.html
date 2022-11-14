@@ -2,7 +2,9 @@
     <div class="header">
         <p>Récents</p>
     </div>
+    
     <div class="button_div" *ngFor="let element of callList" (click)="onCall(element.number)" (mouseover)="onHoverDiv(element)">
+        <img *ngIf="element.source" class="outgoing_call" src="../assets/img/phone/outgoing_call.png" alt="Outgoing Call">
         <p class="call_name" [ngClass]="{missed_call: element.missed}">{{element.label}}</p>
         <p class="call_date">{{element.date | date:'dd/MM/yyyy à HH:mm'}}</p>
     </div>

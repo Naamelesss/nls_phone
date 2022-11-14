@@ -26,6 +26,7 @@ export class AppPhoneFavorisComponent implements OnInit {
     const navigationExtas: NavigationExtras = {
       state: {
         customData: number,
+        source: true,
       }
     };
     this.router.navigate(['/phone/favoris/call'], navigationExtas)

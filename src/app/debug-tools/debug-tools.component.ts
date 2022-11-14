@@ -88,5 +88,6 @@ export class DebugToolsComponent implements OnInit {
 
   onFinish() {
     this.notif = false;
+    this.appService.finishCall(this.incomeNotif.number, false, 'call', true)
   }
 }

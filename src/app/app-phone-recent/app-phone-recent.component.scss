@@ -52,3 +52,11 @@
 .missed_call {
     color: red;
 }
+
+.outgoing_call {
+    position: absolute;
+    width: 14px;
+    margin-top: 18px;
+    margin-left: -22px;
+    filter: brightness(0) saturate(100%) invert(46%) sepia(97%) saturate(0%) hue-rotate(293deg) brightness(90%) contrast(88%);
+}

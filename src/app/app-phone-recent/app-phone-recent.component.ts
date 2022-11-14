@@ -39,6 +39,7 @@ export class AppPhoneRecentComponent implements OnInit {
     const navigationExtas: NavigationExtras = {
       state: {
         customData: number,
+        source: true,
       }
     };
     this.router.navigate(['/phone/recent/call'], navigationExtas)

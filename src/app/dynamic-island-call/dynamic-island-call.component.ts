@@ -47,6 +47,7 @@ export class DynamicIslandCallComponent implements OnInit {
       const navigationExtas: NavigationExtras = {
         state: {
           customData: this.incomeNotif.number,
+          source: false,
         }
       };
       this.router.navigate(['/phone/clavier/call'], navigationExtas)

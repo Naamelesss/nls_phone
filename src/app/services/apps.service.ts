@@ -151,35 +151,35 @@ export class AppsService {
     recentCallsArray: RecentCallsArray[] = [
       {
         number: "03",
-        date: new Date,
+        date: new Date(2022, 10, 14, 10, 31),
         missed: false,
         type: 'call',
-        source: false
+        source: true
       },
       {
         number: "03",
-        date: new Date,
+        date: new Date(2022, 10, 14, 10, 42),
         missed: true,
         type: 'call',
         source: false
       },
       {
         number: "0645742512",
-        date: new Date,
+        date: new Date(2022, 9, 11, 7, 11),
         missed: false,
         type: 'call',
-        source: false
+        source: true
       },
       {
         number: "0645442512",
-        date: new Date,
+        date: new Date(2022, 9, 8, 19, 54),
         missed: true,
         type: 'call',
         source: false
       },
       {
         number: "0645784512",
-        date: new Date,
+        date: new Date(2022, 8, 29, 16, 33),
         missed: true,
         type: 'call',
         source: false
@@ -259,7 +259,20 @@ export class AppsService {
     getRecentCalls(): RecentCallsArray[] {
       return this.recentCallsArray
     }
+    finishCall(number: string, source: boolean, type: 'call' | 'facetime', missed: boolean): void {
+      const newRow_ = {
+        number: number,
+        date: new Date,
+        missed: missed,
+        type: type,
+        source: source,
+      }
 
+      this.recentCallsArray.push(newRow_);
+      if (missed) {
+        this.notificationNumber("add", "Téléphone", 1)
+      }
+    }
     addNewContact(firstName: string, lastName: string, number: string, note: string): void {
       // alert("Name : "+ firstName + " | LastName : " + lastName + " | Number : " + number + " | Note : " + note);
       const newRow = {

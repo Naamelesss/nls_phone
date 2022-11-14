@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AppsService } from '../services/apps.service';
 
 @Component({
@@ -8,21 +9,27 @@ import { AppsService } from '../services/apps.service';
 })
 export class AppPhoneCallComponent implements OnInit {
 
-  constructor(private appService: AppsService) { }
+  constructor(private appService: AppsService, private router: Router, private route: ActivatedRoute) { }
 
   numberLabel!: string;
   callTime!: string;
+  receiveData!: any;
 
   ngOnInit(): void {
-    const receiveData = window.history.state.customData;
+    this.receiveData = window.history.state;
 
-    const contact = this.appService.searchContactByNumber(receiveData)
+    const contact = this.appService.searchContactByNumber(this.receiveData.customData)
     if (contact) {
       this.numberLabel = contact.firstName + ' ' + contact.lastName;
     } else {
-      this.numberLabel = receiveData;
+      this.numberLabel = this.receiveData.customData;
     }
 
     this.callTime = 'appel...'
+  }
+
+  onDismiss() {
+    this.appService.finishCall(this.receiveData.customData, this.receiveData.source, 'call', false)
+    this.router.navigate(['../'], {relativeTo: this.route});
   }
 }
