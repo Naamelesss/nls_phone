@@ -35,3 +35,23 @@ nav {
         // background-color: blue;
     }
 }
+
+.recent_notif {
+    position: absolute;
+    background-color: red;
+    height: 14px;
+    width: 14px;
+    border-radius: 7px;
+    margin-right: 72px;
+    margin-top: -2px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    p {
+        color: white;
+        text-align: center;
+        font-size: 10px;
+    }
+}

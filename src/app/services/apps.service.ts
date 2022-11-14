@@ -297,6 +297,14 @@ export class AppsService {
       const search = this.searchContactByNumber(number)
       search.favoris = !search.favoris
     }
+    getNotificationNumber(app: string): number {
+      const search = this.appsArray.find(search => search.name === app);
+      if (search) {
+        return search.notification
+      } else {
+        throw new Error('Application introuvable ! (getNotificationNumber)')
+      }
+    }
     notificationNumber(type: 'add' | 'remove',  app: string, number: number) {
       const search = this.appsArray.find(search => search.name === app);
       if (search) {

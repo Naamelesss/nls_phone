@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppsService } from '../services/apps.service';
 
 @Component({
   selector: 'app-app-phone',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppPhoneComponent implements OnInit {
 
-  constructor() { }
+  constructor(private appService: AppsService) { }
+
+  recentNumber!: number;
 
   ngOnInit(): void {
+    this.recentNumber = this.appService.getNotificationNumber('Téléphone')
   }
 }

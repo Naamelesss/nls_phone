@@ -3,6 +3,9 @@
         <img src="../assets/img/phone/star.png" alt="star">
         <p>Favoris</p>
     </div>
+    <div class="recent_notif" *ngIf="recentNumber">
+        <p>{{recentNumber}}</p>
+    </div>
     <div class="filter_div" routerLink="/phone/recent" routerLinkActive="routerActive">
         <img src="../assets/img/phone/time.png" alt="clock">
         <p>Récents</p>
