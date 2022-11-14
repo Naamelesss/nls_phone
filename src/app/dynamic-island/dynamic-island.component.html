@@ -8,7 +8,7 @@
         <p class="call_name">{{labelText}}</p>
     
         <img class="base_img take" src="../assets/img/call.png" (click)="onAcceptCall()">
-        <img class="base_img phone_decline" src="../assets/img/call.png" (click)="onCloseNotif()">
+        <img class="base_img phone_decline" src="../assets/img/call.png" (click)="onCloseNotif(true)">
 
         <audio autoplay loop>
             <source src="../assets/song/ringtone.ogg" type="audio/ogg">
@@ -20,7 +20,7 @@
         <p class="msg_name">{{msgText}}</p>
 
         <img class="base_img take" src="../assets/img/dynamic-island/next.png" (click)="onAcceptCall()">
-        <img class="base_img msg_decline" src="../assets/img/dynamic-island/cancel.png" (click)="onCloseNotif()">
+        <img class="base_img msg_decline" src="../assets/img/dynamic-island/cancel.png" (click)="onCloseNotif(false)">
    
         <audio autoplay>
             <source src="../assets/song/notification.ogg" type="audio/ogg">

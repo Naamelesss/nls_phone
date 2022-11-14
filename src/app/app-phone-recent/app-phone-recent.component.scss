@@ -2,16 +2,31 @@
     transition: 300ms ease-in-out;
 }
 
-.header {
-    position: absolute;
-    top: 20px;
-    font-size: 32px;
-    font-weight: bold;
-    height: 80px;
-    width: 100%;
-    border-bottom: 1px solid lightgray;
-    margin-left: 30px;
-}
+// scroll bar
+// #bar {
+//     margin-right: 1px;
+// }
+#bar::-webkit-scrollbar-track
+ {
+    // box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: lightgray;
+	border-radius: 2px;
+ }
+ 
+#bar::-webkit-scrollbar
+ {
+    background-color: lightgray;
+    width: 4px;
+    border-radius: 2px;
+ }
+ 
+#bar::-webkit-scrollbar-thumb
+ {
+    background-color: gray;
+	border-radius: 2px;
+ }
+
+// ------
 
 .background {
     position: relative;
@@ -23,9 +38,29 @@
     background-color: white;
 }
 
+.header {
+    position: absolute;
+    top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    margin-left: 30px;
+}
+
+.container {
+    // background-color: red;
+    position: absolute;
+    top: 100px;
+    height: 560px;
+    width: 100%;
+    overflow-y: auto;
+}
+
 .button_div {
     position: relative;
-    top: 100px;
+    // top: 100px;
     height: 50px;
     display: flex;
     border-bottom: 1px solid lightgray;
