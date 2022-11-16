@@ -1,0 +1,100 @@
+header {
+    height: 140px;
+    // width: 100%;
+    background-color: rebeccapurple;
+}
+
+body {
+    height: 612px;
+    // width: 100%;
+    // background-color: rgb(226, 131, 14);
+    background-color: white;
+
+    .conversation {
+        position: absolute;
+        top: 140px;
+        height: 606px;
+        width: 100%;
+        // background-color: azure;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        .message_block {
+            // background-color: red;
+
+            margin-top: 2px;
+            min-height: 28px;
+            // height: 100px;
+            width: 86%;
+
+            display: flex;
+        }
+        .send {
+            justify-content: flex-end;
+        }
+        .receive {
+            justify-content: flex-start;
+        }
+
+        .message{
+            background-color: #1D71F2;
+            // background-color: #F2F0F6;
+            // margin-left: 30px;
+            // display: flex;
+            // align-items: center;
+            // height: fit-content;
+            // height: fit-content;
+            // width: fit-content;
+
+            max-width: 260px;
+            // max-height: fit-content;
+            // overflow-y: scroll;
+            border-radius: 14px;
+            // display: block;
+            display: flex;
+            align-items: center;
+            // position: relative;
+            // height: 100px;
+            // justify-content: center;
+            // textarea {
+            //     // background-color: yellow;
+            //     margin: 0 10px;
+            //     // color: white;
+            //     // text-align: center;
+            //     background: none;
+            //     border: none;
+            //     outline: none;
+            // }
+            // textarea:selected {
+            //     border: none;
+            // }
+
+            // height: auto;
+            p {
+                margin: 0 10px;
+                width: fit-content;
+                // background-color: red;
+                // overflow: ;
+                // white-space: nowrap;
+                // white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: white;
+            }
+        }
+        .send {
+            // position: relative;
+            // right: -100px;
+            // background-color: blue;
+            // align-items: flex-end;
+        }
+    }
+}
+
+footer {
+    height: 40px;
+    // width: 100%;
+    background-color: aqua;
+}

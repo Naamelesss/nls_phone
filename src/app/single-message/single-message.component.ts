@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MessagesArray } from '../models/apps.model';
 import { AppsService } from '../services/apps.service';
 
@@ -11,7 +12,7 @@ export class SingleMessageComponent implements OnInit {
   @Input() message!: MessagesArray;
   labelName!: string;
 
-  constructor(private appService: AppsService) { }
+  constructor(private appService: AppsService, private router: Router) { }
 
   ngOnInit(): void {
     const search = this.appService.searchContactByNumber(this.message.number) // a mettre dans service
@@ -22,4 +23,7 @@ export class SingleMessageComponent implements OnInit {
     }
   }
 
+  onOpenConversation() {
+    this.router.navigate([`../messages/${this.message.number}`]);
+  }
 }
