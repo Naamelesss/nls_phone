@@ -18,6 +18,8 @@ export class AppPhoneRecentComponent implements OnInit {
   ngOnInit(): void {
     this.callList = this.appService.getRecentCalls();
 
+    this.callList.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+
     for (let i = 0; i < this.callList.length; i++) {
       const search = this.appService.searchContactByNumber(this.callList[i].number);
       if (search) {
