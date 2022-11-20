@@ -188,30 +188,142 @@ export class AppsService {
 
     messagesArray: MessagesArray[] = [
       {
+        source: true,
         number: "03",
         message: "Go MCDO Mec",
         date: new Date,
         lu: false
       },
       {
+        source: false,
         number: "03",
         message: "Allo",
         date: new Date,
         lu: false
       },
       {
+        source: true,
         number: "03",
         message: "Repp",
         date: new Date,
         lu: false
       },
       {
+        source: true,
+        number: "03",
+        message: "Go MCDO Mec",
+        date: new Date,
+        lu: false
+      },
+      {
+        source: false,
+        number: "03",
+        message: "Allo",
+        date: new Date,
+        lu: false
+      },
+      {
+        source: true,
+        number: "03",
+        message: "Repp",
+        date: new Date,
+        lu: false
+      },
+      {
+        source: true,
+        number: "03",
+        message: "Go MCDO Mec",
+        date: new Date,
+        lu: false
+      },
+      {
+        source: false,
+        number: "03",
+        message: "Allo",
+        date: new Date,
+        lu: false
+      },
+      {
+        source: true,
+        number: "03",
+        message: "Repp",
+        date: new Date,
+        lu: false
+      },
+      {
+        source: true,
+        number: "03",
+        message: "Go MCDO Mec",
+        date: new Date,
+        lu: false
+      },
+      {
+        source: false,
+        number: "03",
+        message: "Allo",
+        date: new Date,
+        lu: false
+      },
+      {
+        source: true,
+        number: "03",
+        message: "Repp",
+        date: new Date,
+        lu: false
+      },
+      {
+        source: true,
+        number: "03",
+        message: "Go MCDO Mec",
+        date: new Date,
+        lu: false
+      },
+      {
+        source: false,
+        number: "03",
+        message: "Allo",
+        date: new Date,
+        lu: false
+      },
+      {
+        source: true,
+        number: "03",
+        message: "Repp",
+        date: new Date,
+        lu: false
+      },
+      {
+        source: true,
+        number: "03",
+        message: "Go MCDO Mec",
+        date: new Date,
+        lu: false
+      },
+      {
+        source: false,
+        number: "03",
+        message: "Allo",
+        date: new Date,
+        lu: false
+      },
+      {
+        source: true,
+        number: "03",
+        message: "Repp",
+        date: new Date,
+        lu: false
+      },
+
+
+      {
+        source: true,
         number: "0355488756",
         message: "Vien comico urgent",
         date: new Date,
         lu: true
       },
       {
+        source: true,
         number: "0697785462",
         message: "C'est moi Larry",
         date: new Date,
@@ -234,9 +346,20 @@ export class AppsService {
       }
       return(search2);
     }
-    // getAllMessages(): MessagesArray[] {
-    //   return this.messagesArray;
-    // }
+    getAllMessagesByNumber(number: string): MessagesArray[] {
+      const search = this.messagesArray.filter(search => search.number === number)
+      return search;
+    }
+    pushMessage(number: string, text: string): void {
+      const newRow__ = {
+        source: true,
+        number: number,
+        message: text,
+        date: new Date,
+        lu: false
+      }
+      this.messagesArray.push(newRow__);
+    }
 
     // a faire pour apps
     getAllContacts(): ContactsArray[] {

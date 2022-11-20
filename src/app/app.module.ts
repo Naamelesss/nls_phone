@@ -27,6 +27,8 @@ import { AppMessagesComponent } from './app-messages/app-messages.component';
 import { SingleMessageComponent } from './single-message/single-message.component';
 import { AppMessageConversationComponent } from './app-message-conversation/app-message-conversation.component';
 
+import { AutosizeModule } from 'ngx-autosize';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +58,8 @@ import { AppMessageConversationComponent } from './app-message-conversation/app-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AutosizeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

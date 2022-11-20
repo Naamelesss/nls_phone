@@ -24,6 +24,7 @@ export class RecentCallsArray {
 }
 
 export class MessagesArray {
+    source!: boolean;
     number!: string;
     message!: string;
     date!: Date;
