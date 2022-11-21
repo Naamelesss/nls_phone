@@ -30,13 +30,15 @@ export class AppMessageConversationComponent implements OnInit {
     // this.conversation = this.appService.getAllMessagesByNumber(this.number)
     // this.conversation = this.appService.messagesArray;
 
+    this.appService.checkUpMessagesNotifications(this.number);
+
     this.interval$ = interval(0);
-    this.interval$.subscribe(() => this.conversation = this.appService.getAllMessagesByNumber(this.number))
+    this.interval$.subscribe(() => this.conversation = this.appService.getAllMessagesByNumber(this.number));
   }
   sendMessage(event: any) {
     const message = event.target.value;
     if (message) {
-      this.appService.pushMessage(this.number, message)
+      this.appService.pushMessage(this.number, message);
     }
   }
 }

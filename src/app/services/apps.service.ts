@@ -201,7 +201,7 @@ export class AppsService {
         number: "03",
         message: "Allo_1.5",
         date: new Date(21, 10, 2022, 14, 2),
-        lu: false,
+        lu: true,
         lowInterval: false,
         firstBubble : true
       },
@@ -210,7 +210,7 @@ export class AppsService {
         number: "03",
         message: "Repp_0",
         date: new Date(21, 10, 2022, 13, 1),
-        lu: false,
+        lu: true,
         lowInterval: true,
         firstBubble : true
       },
@@ -219,7 +219,7 @@ export class AppsService {
         number: "03",
         message: "Repp_1",
         date: new Date(21, 10, 2022, 14, 1),
-        lu: false,
+        lu: true,
         lowInterval: false,
         firstBubble : false
       },
@@ -277,7 +277,7 @@ export class AppsService {
         number: number,
         message: text,
         date: new Date,
-        lu: false,
+        lu: true,
         lowInterval: false,
         firstBubble : true
       }
@@ -288,6 +288,13 @@ export class AppsService {
         newRow__.firstBubble = false;
       }
       this.messagesArray.push(newRow__);
+    }
+    checkUpMessagesNotifications(number: string) {
+      const checkUp = this.getAllMessagesByNumber(number).filter(s => !s.lu);
+      if (checkUp.length) {
+        checkUp.forEach(element => element.lu = true)
+        this.notificationNumber("remove", "Messages", checkUp.length);
+      }
     }
 
     // a faire pour apps
