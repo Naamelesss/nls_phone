@@ -27,7 +27,7 @@ header {
     // flex-direction: row;
     .header_container {
         position: relative;
-        top: 60px;
+        top: 66px;
         // background-color: red;
         // height: 100%;
         display: flex;
@@ -51,7 +51,9 @@ header {
     }
     .user_name {
         font-size: 13px;
-        margin-right: 5px;
+        // margin-right: 5px;
+        margin: 2px 5px;
+        // background-color: red;
     }
     
     // .clone {
@@ -122,6 +124,7 @@ body {
             // }
 .box {
     // background-color: blue;
+    margin-top: 1px;
     width: 80%;
     // position: relative;
     // position: relative;
@@ -150,6 +153,9 @@ body {
     // padding: 0;
 }
 
+.time {
+    text-align: center;
+}
 // overflow-y: auto;
 
 .message_block {
@@ -177,6 +183,7 @@ body {
 .send_tail {
     // position: relative;
     // top: 20px;
+    // height: 14px;
     position: relative;
     left: 305px;
     bottom: 15px;
@@ -188,6 +195,8 @@ body {
     // margin: 0;
     // bottom: 0;
     // margin-right: -5px;
+    // background-color: red;
+    // margin: 0;
 }
 .receive {
     justify-content: flex-start;

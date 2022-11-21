@@ -29,6 +29,8 @@ export class MessagesArray {
     message!: string;
     date!: Date;
     lu!: boolean;
+    lowInterval!: boolean;
+    firstBubble!: boolean;
 }
 
 export class IncomeNotif {

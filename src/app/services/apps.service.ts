@@ -190,128 +190,38 @@ export class AppsService {
       {
         source: true,
         number: "03",
-        message: "Go MCDO Mec",
-        date: new Date,
-        lu: false
+        message: "Go MCDO Mec_2",
+        date: new Date(21, 10, 2022, 14, 5),
+        lu: false,
+        lowInterval: false,
+        firstBubble : true
       },
       {
         source: false,
         number: "03",
-        message: "Allo",
-        date: new Date,
-        lu: false
+        message: "Allo_1.5",
+        date: new Date(21, 10, 2022, 14, 2),
+        lu: false,
+        lowInterval: false,
+        firstBubble : true
       },
       {
         source: true,
         number: "03",
-        message: "Repp",
-        date: new Date,
-        lu: false
+        message: "Repp_0",
+        date: new Date(21, 10, 2022, 13, 1),
+        lu: false,
+        lowInterval: true,
+        firstBubble : true
       },
       {
         source: true,
         number: "03",
-        message: "Go MCDO Mec",
-        date: new Date,
-        lu: false
-      },
-      {
-        source: false,
-        number: "03",
-        message: "Allo",
-        date: new Date,
-        lu: false
-      },
-      {
-        source: true,
-        number: "03",
-        message: "Repp",
-        date: new Date,
-        lu: false
-      },
-      {
-        source: true,
-        number: "03",
-        message: "Go MCDO Mec",
-        date: new Date,
-        lu: false
-      },
-      {
-        source: false,
-        number: "03",
-        message: "Allo",
-        date: new Date,
-        lu: false
-      },
-      {
-        source: true,
-        number: "03",
-        message: "Repp",
-        date: new Date,
-        lu: false
-      },
-      {
-        source: true,
-        number: "03",
-        message: "Go MCDO Mec",
-        date: new Date,
-        lu: false
-      },
-      {
-        source: false,
-        number: "03",
-        message: "Allo",
-        date: new Date,
-        lu: false
-      },
-      {
-        source: true,
-        number: "03",
-        message: "Repp",
-        date: new Date,
-        lu: false
-      },
-      {
-        source: true,
-        number: "03",
-        message: "Go MCDO Mec",
-        date: new Date,
-        lu: false
-      },
-      {
-        source: false,
-        number: "03",
-        message: "Allo",
-        date: new Date,
-        lu: false
-      },
-      {
-        source: true,
-        number: "03",
-        message: "Repp",
-        date: new Date,
-        lu: false
-      },
-      {
-        source: true,
-        number: "03",
-        message: "Go MCDO Mec",
-        date: new Date,
-        lu: false
-      },
-      {
-        source: false,
-        number: "03",
-        message: "Allo",
-        date: new Date,
-        lu: false
-      },
-      {
-        source: true,
-        number: "03",
-        message: "Repp",
-        date: new Date,
-        lu: false
+        message: "Repp_1",
+        date: new Date(21, 10, 2022, 14, 1),
+        lu: false,
+        lowInterval: false,
+        firstBubble : false
       },
 
 
@@ -320,14 +230,18 @@ export class AppsService {
         number: "0355488756",
         message: "Vien comico urgent",
         date: new Date,
-        lu: true
+        lu: true,
+        lowInterval : false,
+        firstBubble : true
       },
       {
         source: true,
         number: "0697785462",
         message: "C'est moi Larry",
         date: new Date,
-        lu: false
+        lu: false,
+        lowInterval: false,
+        firstBubble : true
       }
     ]
 
@@ -335,28 +249,43 @@ export class AppsService {
       const search: any = [];
       const search2: any = [];
       var i:number;
-      for(i = this.messagesArray.length-1; i>=0; i--) {
-        if (!search[this.messagesArray[i].number]) {
-          let position = i-this.messagesArray.length;
+      const messageArray = this.messagesArray.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+      for(i = messageArray.length-1; i>=0; i--) {
+        if (!search[messageArray[i].number]) {
+          let position = i-messageArray.length;
           // console.log(position);
-          search[this.messagesArray[i].number] = true;
+          search[messageArray[i].number] = true;
           // search2.push(this.messagesArray[i]);
-          search2.splice(position, 0, this.messagesArray[i]);
+          search2.splice(position, 0, messageArray[i]);
         }
       }
+      // const search3 = search2.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
       return(search2);
     }
     getAllMessagesByNumber(number: string): MessagesArray[] {
       const search = this.messagesArray.filter(search => search.number === number)
-      return search;
+      const search_sort = search.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      return search_sort;
     }
     pushMessage(number: string, text: string): void {
+      const messages = this.getAllMessagesByNumber(number)
+      const lastMessage = messages[messages.length-messages.length]
+      // alert(messages.length)
+
       const newRow__ = {
         source: true,
         number: number,
         message: text,
         date: new Date,
-        lu: false
+        lu: false,
+        lowInterval: false,
+        firstBubble : true
+      }
+      if (lastMessage.source && (lastMessage.date.getTime() - newRow__.date.getTime() >= -300000)) {
+        //300 000 = 5 min???
+        //  alert(lastMessage.date.getTime() - newRow__.date.getTime())
+        lastMessage.lowInterval = true;
+        newRow__.firstBubble = false;
       }
       this.messagesArray.push(newRow__);
     }

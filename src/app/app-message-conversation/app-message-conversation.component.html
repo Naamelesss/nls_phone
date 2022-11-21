@@ -36,7 +36,7 @@
                     </defs>
                 </svg>
                 <div class="user">
-                    <p class="user_name">Pooya</p>
+                    <p class="user_name">{{ labelName }}</p>
                     <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1L4.88192 4.88672C5.04454 5.04954 5.03834 5.32424 4.86856 5.47878L1 9" stroke="#AEAEB1" stroke-width="1.5" stroke-linecap="round"/>
                     </svg>
@@ -54,15 +54,16 @@
     <body>
         <!-- <div class="conversation"> -->
             <div class="box" *ngFor="let element of conversation">
+                <p class="time" *ngIf="element.firstBubble">{{ element.date | date: 'dd/MM/yyyy à HH:mm' }}</p>
                 <div class="message_block" [ngClass]="{send: element.source, receive: !element.source}">
                     <div class="message" [ngClass]="{send_color: element.source, receive_color: !element.source}">
                         <p>{{element.message}}</p>
                     </div> 
                 </div>
-                <svg *ngIf="element.source" class="send_tail" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg *ngIf="element.source && !element.lowInterval" class="send_tail" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0285 0H0C0 7.73199 6.26801 14 14 14H20V13.6709C18.5689 12.4697 17.3842 10.9871 16.5262 9.30324C15.4038 7.10032 15.107 4.39657 15.0285 0Z" fill="#007AFF"/>
                 </svg>
-                <svg *ngIf="!element.source" class="receive_tail" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg *ngIf="!element.source && !element.lowInterval" class="receive_tail" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 13.6716V14H6C13.732 14 20 7.73199 20 0H5.00033C5.00033 2.73829 5.00033 4.10744 4.80939 5.25169C4.24701 8.62183 2.49706 11.5753 0 13.6716Z" fill="#E6E5EB"/>
                 </svg>   
             </div>

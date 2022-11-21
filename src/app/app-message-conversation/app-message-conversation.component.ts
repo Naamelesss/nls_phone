@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { interval, Observable } from 'rxjs';
-import { MessagesArray } from '../models/apps.model';
+import { ContactsArray, MessagesArray } from '../models/apps.model';
 import { AppsService } from '../services/apps.service';
 
 @Component({
@@ -13,12 +13,20 @@ export class AppMessageConversationComponent implements OnInit {
 
   constructor(private appService: AppsService, private route: ActivatedRoute) { }
 
+  labelName!: string;
+  contact!: ContactsArray;
   number!: string;
   conversation!: MessagesArray[];
   interval$!: Observable<number>
 
   ngOnInit(): void {
-    this.number = this.route.snapshot.params['number']
+    this.number = this.route.snapshot.params['number'];
+    this.contact = this.appService.searchContactByNumber(this.number);
+    if (this.contact.firstName + this.contact.lastName) {
+      this.labelName = this.contact.firstName + this.contact.lastName;
+    } else {
+      this.labelName = this.number;
+    }
     // this.conversation = this.appService.getAllMessagesByNumber(this.number)
     // this.conversation = this.appService.messagesArray;
 
