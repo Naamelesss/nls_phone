@@ -15,6 +15,7 @@ export class AppMessagesComponent implements OnInit {
 
   ngOnInit(): void {
     this.messagesArray = this.appService.getRecentConversation();
+    this.messagesArray = this.messagesArray.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   }
 
 }
